@@ -1,0 +1,552 @@
+{
+  "users": [
+    {
+      "id": "42c7",
+      "username": "silpa",
+      "email": "silpa@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "0fec",
+      "username": "hari",
+      "email": "hari123@gmail.com",
+      "password": "1810"
+    },
+    {
+      "id": "e266",
+      "username": "silja",
+      "email": "minnu@gmail.com",
+      "password": "4251"
+    }
+  ],
+
+
+
+
+  "products" : [
+    {
+     
+    
+      "id": "2",
+      "name": "New Balance",
+      "description": "Modern and stylish shoes with excellent cushioning and support.",
+      "price": 150,
+      "category": "Men",
+      "available_sizes": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "New-balance",
+      "image_url": "https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw769f9d4b/images/page-designer/2024/July/16130_Comp_X_Womens_Shoes.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.0,
+      "special_offer": "Buy one get one 50% off",
+      "discount": 50,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Available in limited colors. Offer valid while supplies last."
+    },
+    {
+      "id": "3",
+      "name": "Nike X-3 ",
+      "description": "Retro-inspired shoes with a comfortable fit and bold design.",
+      "price": 115,
+      "category": "Men",
+      "available_sizes": [
+        "9",
+        "10",
+        "11"
+      ],
+      "brand": "Nike",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3ffcfac2-025a-4107-ac04-5fb938d3a5f6/KILLSHOT+2+LEATHER.png",
+      "in_stock": false,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Expected restock in two weeks."
+    },
+    {
+      "id": "4",
+      "name": "Reebok Classic",
+      "description": "Classic design with a timeless look and comfortable fit.",
+      "price": 90,
+      "category": "Men",
+      "quantity": 1,
+      "available_sizes": [
+        "8",
+        "9"
+      ],
+      "brand": "Reebok",
+      "image_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 3.4,
+      "special_offer": "15% off on your first purchase",
+      "discount": 15,
+      "warranty": "6 months",
+      "additional_details": "Available in various colors and sizes."
+    },
+    {
+      "id": "5",
+      "name": "New Balance 990v5",
+      "description": "Premium materials and craftsmanship for optimal comfort.",
+      "price": 175,
+      "category": "Men",
+      "quantity": 1,
+      "available_sizes": [
+        "9",
+        "10",
+        "11"
+      ],
+      "brand": "New Balance",
+      "image_url": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-017.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.5,
+      "special_offer": "20% off for a limited time",
+      "discount": 20,
+      "warranty": "2 years",
+      "additional_details": "Special offer ends soon. Free shipping included."
+    },
+    {
+      "id": "6",
+      "name": "Nike Air Force 1",
+      "description": "Iconic design with superior comfort and durability.",
+      "price": 100,
+      "category": "Men",
+      "available_sizes": [
+        "6",
+        "7",
+        "8"
+      ],
+      "brand": "Nike",
+      "image_url": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 3.0,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Regular stock available."
+    },
+    {
+      "id": "7",
+      "name": "Adidas Superstar",
+      "description": "Classic sneakers with a modern twist for everyday wear.",
+      "price": 85,
+      "category": "Men",
+      "available_sizes": [
+        "5",
+        "6",
+        "7"
+      ],
+      "brand": "Adidas",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c3cc4a0-2bf4-4a7c-a2ba-c83875642bc5/NIKE+CORTEZ+TXT.png",
+      "in_stock": false,
+      "featured": false,
+      "stars": 4.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "8",
+      "name": "Puma Clyde",
+      "description": "Stylish and comfortable sneakers for everyday wear.",
+      "price": 95,
+      "category": "Men",
+      "available_sizes": [
+        "6",
+        "7",
+        "8"
+      ],
+      "brand": "Puma",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0029ebe4-0ea3-4d8b-9e0d-b13ffa466165/NIKE+SB+ZOOM+BLAZER+MID.png",
+      "in_stock": true,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Available in all sizes."
+    },
+    {
+      "id": "9",
+      "name": "Reebok Zig Kinetica",
+      "description": "High-performance shoes with a unique design and excellent cushioning.",
+      "price": 120,
+      "category": "Men",
+      "available_sizes": [
+        "6",
+        "7"
+      ],
+      "brand": "Reebok",
+      "image_url": "https://nb.scene7.com/is/image/NB/u9060eca_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.4,
+      "special_offer": "10% off for members",
+      "discount": 10,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Limited edition. Membership required for discount."
+    },
+    {
+      "id": "10",
+      "name": "New Balance Fresh Foam",
+      "description": "Comfortable and cushioned running shoes with advanced technology.",
+      "price": 150,
+      "category": "Men",
+      "available_sizes": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "brand": "New Balance",
+      "image_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d7a7be55e6c94448a3181716f838fa22_9366/4DFWD_3_Running_Shoes_Grey_IG8980_HM1.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "Buy two get 30% off",
+      "discount": 30,
+      "warranty": "2 years",
+      "quantity": 1,
+      "additional_details": "Extended warranty included. Offer valid until end of month."
+    },
+    {
+      "id": "11",
+      "name": "Adidas NMD",
+      "description": "Sleek and stylish sneakers with a comfortable fit for any occasion.",
+      "price": 160,
+      "category": "Men",
+      "available_sizes": [
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "Adidas",
+      "image_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/62aabd93a80240b1afbdb51b65076aab_9366/Forum_Low_Shoes_Blue_IG3784_01_standard.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.0,
+      "special_offer": "15% off with code NMD15",
+      "discount": 15,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Offer valid while supplies last. Free returns."
+    },
+    {
+      "id": "12",
+      "name": "Nike React Infinity Run",
+      "description": "Innovative running shoes with exceptional cushioning and support.",
+      "price": 170,
+      "category": "Women",
+      "available_sizes": [
+        "9",
+        "10",
+        "11"
+      ],
+      "brand": "Nike",
+      "image_url": "https://s.alicdn.com/@sc04/kf/Hae6fd6ba77cb49f3be8c884928ca847fR.jpg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 2.5,
+      "special_offer": "10% off on orders over $150",
+      "discount": 10,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Free shipping on all orders. Limited stock."
+    },
+    {
+      "id": "13",
+      "name": "Puma Basket Classic",
+      "description": "Vintage-inspired sneakers with a modern twist and superior comfort.",
+      "price": 100,
+      "category": "Women",
+      "available_sizes": [
+        "6",
+        "7",
+        "8"
+      ],
+      "brand": "Puma",
+      "image_url": "https://s.alicdn.com/@sc04/kf/H099893a17cbd40358e75437d4e652d3cD.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "6 months",
+      "quantity": 1,
+      "additional_details": "Classic color options available. Regular stock."
+    },
+    {
+      "id": "14",
+      "name": "Reebok Club C 85",
+      "description": "Classic design with a comfortable fit for casual wear.",
+      "price": 90,
+      "category": "Women",
+      "available_sizes": [
+        "5",
+        "6",
+        "7"
+      ],
+      "brand": "Reebok",
+      "image_url": "https://s.alicdn.com/@sc04/kf/Ha1665e97746c4267806a294fbea6012aO.jpg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 4.2,
+      "special_offer": "15% off with code REEBOK15",
+      "discount": 15,
+      "warranty": "6 months",
+      "quantity": 1,
+      "additional_details": "Available in white and black. Free shipping."
+    },
+    {
+      "id": "15",
+      "name": "New Balance 574",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Women",
+      "available_sizes": [
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "New Balance",
+      "image_url": "https://s.alicdn.com/@sc04/kf/Hc50f169228294ebb8c882b2a57b72e3bx.jpg",
+      "in_stock": false,
+      "featured": false,
+      "stars": 4.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "16",
+      "name": "New Balance 574",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Women",
+      "available_sizes": [
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "New Balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/u1080l13_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": false,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "17",
+      "name": "New Adidas 574",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Kids",
+      "available_sizes": [
+        "3",
+        "4"
+      ],
+      "brand": "Adidas",
+      "image_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c8aba848adba4eeebf89ae2e00ba47dd_9366/Grand_Court_2.0_Shoes_Kids_White_GW6521_01_standard.jpg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 4.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "18",
+      "name": "New balance 574",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Kids",
+      "available_sizes": [
+        "3",
+        "4"
+      ],
+      "brand": "Adidas",
+      "image_url": "https://nb.scene7.com/is/image/NB/iv9060el_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": true,
+      "featured": true,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "19",
+      "name": "997R NEW-B Hook & Loop ",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Kids",
+      "available_sizes": [
+        "3",
+        "4"
+      ],
+      "brand": "New balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": true,
+      "featured": true,
+      "stars": 4.0,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "20",
+      "name": "990v6 Hook and Loop",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Kids",
+      "available_sizes": [
+        "3",
+        "4"
+      ],
+      "brand": "New balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/iv990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": true,
+      "featured": false,
+      "stars": 4.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "21",
+      "name": "990v4 ",
+      "description": "Timeless sneakers with premium materials and a comfortable fit.",
+      "price": 130,
+      "category": "Kids",
+      "available_sizes": [
+        "3",
+        "6"
+      ],
+      "brand": "New balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/gsb550vr_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": true,
+      "featured": false,
+      "stars": 3.0,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 0,
+      "additional_details": "Out of stock. Check back soon."
+    },
+    {
+      "id": "22",
+      "name": "Nike Infinity Run Flyknit",
+      "description": "High-performance running shoes with React foam for maximum comfort.",
+      "price": 160,
+      "category": "Running",
+      "available_sizes": [
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "Nike",
+      "image_url": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Only a few left in stock."
+    },
+    {
+      "id": "23",
+      "name": "Nike React Miler",
+      "description": "Durable running shoes designed for long-distance comfort.",
+      "price": 130,
+      "category": "Running",
+      "available_sizes": [
+        "8",
+        "9",
+        "10"
+      ],
+      "brand": "Nike",
+      "image_url": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+      "in_stock": true,
+      "featured": false,
+      "stars": 3.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Limited stock available."
+    },
+    {
+      "id": "24",
+      "name": " Unisex 9060",
+      "description": "The 9060 is a new expression of the refined style and innovation-led design that have made the 99X series home to some of the most iconic models in New Balance history.",
+      "price": "139",
+      "category": "Women",
+      "available_sizes": [],
+      "brand": "New Balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/u9060gry_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+      "in_stock": "",
+      "featured": false,
+      "stars": 2.4,
+      "special_offer": "",
+      "discount": "",
+      "warranty": "",
+      "quantity": 1,
+      "additional_details": ""
+    },
+    {
+      "id": "25",
+      "name": "New-balance FuelCell 990v6",
+      "description": "This kids shoe modernizes the iconic style with reflective details throughout the upper and a FuelCell midsole that adds a propulsive fee maximum comfort.",
+      "price": 260,
+      "category": "kids",
+      "available_sizes": [
+        "4",
+        "5",
+        "6"
+      ],
+      "brand": "New-balance",
+      "image_url": "https://nb.scene7.com/is/image/NB/pc990pk6_nb_05_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
+      "in_stock": true,
+      "featured": false,
+      "stars": 2.4,
+      "special_offer": "None",
+      "discount": 0,
+      "warranty": "1 year",
+      "quantity": 1,
+      "additional_details": "Only a few left in stock."
+    }
+
+  ]
+
+  
+}

@@ -1,0 +1,29 @@
+.login-page{
+    background-image: url('/background1.png');
+    background-size: cover;
+    background-position: center;
+}
+.errmsg{
+    color:  #D01110;
+}
+.shoeimg{
+    background-color: antiquewhite;
+}
+.product-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+.product-btn{
+    color: #ecd5bb;
+    background-color: #8c021e;
+}
+.head-product{
+    color: #710117;
+}
+.product-btn:hover{
+    background-color:#710117 ;
+}
+
