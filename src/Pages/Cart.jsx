@@ -1,8 +1,8 @@
+import CartProduct from '../components/Cart/CartProduct';
+import { totalItem, totalPrice } from '../Context/Hooks/CartReducer';
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { ProductContext } from '../Context/ProductContext';
-import CartProduct from '../components/Cart/CartProduct';
-import { totalItem, totalPrice } from '../Context/CartReducer';
-import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const { cart } = useContext(ProductContext);
@@ -32,7 +32,7 @@ const Cart = () => {
                             <p className="text-lg font-medium">Total Items: <span className="font-semibold">{totalItem(cart)}</span></p>
                             <p className="text-lg font-medium">Total Price: <span className="font-semibold">Rs. {totalPrice(cart).toFixed(2)}</span></p>
                         </div>
-                        <button className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-4 rounded-lg shadow-lg transition duration-300">
+                        <button onClick={()=> navigate('/checkout')} className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-4 rounded-lg shadow-lg transition duration-300">
                             Buy Now
                         </button>
                     </div>
@@ -42,4 +42,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default Cart

@@ -1,13 +1,29 @@
 .login-page{
-    background-image: url('/background1.png');
+    /* background-image: url('/background1.png');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    background-color: #FDE5C3;
+}
+.login-back{
+    background-color: #F9F3E6;
+}
+
+.login-head{
+    color: #7A1625;
+}
+.login-input{
+    background-color: #FAF8F3;
+    border-bottom: #C4A484;
+    color: #7A1625;
+}
+.login-sub{
+    color: #7C7367;
 }
 .errmsg{
-    color:  #D01110;
+    color:  #D32F2F;
 }
 .shoeimg{
-    background-color: antiquewhite;
+    background-color: #ecd5bb;
 }
 .product-image {
     transition: transform 0.3s ease-in-out;

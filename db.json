@@ -17,16 +17,29 @@
       "username": "silja",
       "email": "minnu@gmail.com",
       "password": "4251"
+    },
+    {
+      "id": "8fe0",
+      "username": "abc",
+      "email": "abc123@gmail.com",
+      "password": "abc123"
+    },
+    {
+      "id": "a87c",
+      "username": "user1",
+      "email": "user1@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "73c9",
+      "username": "silpa das",
+      "email": "silpadas4251@gmail.com",
+      "password": "admin@4251",
+      "admin":true
     }
   ],
-
-
-
-
-  "products" : [
+  "products": [
     {
-     
-    
       "id": "2",
       "name": "New Balance",
       "description": "Modern and stylish shoes with excellent cushioning and support.",
@@ -42,7 +55,7 @@
       "image_url": "https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw769f9d4b/images/page-designer/2024/July/16130_Comp_X_Womens_Shoes.jpg",
       "in_stock": true,
       "featured": false,
-      "stars": 4.0,
+      "stars": 4,
       "special_offer": "Buy one get one 50% off",
       "discount": 50,
       "warranty": "1 year",
@@ -129,7 +142,7 @@
       "image_url": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
       "in_stock": true,
       "featured": true,
-      "stars": 3.0,
+      "stars": 3,
       "special_offer": "None",
       "discount": 0,
       "warranty": "1 year",
@@ -239,7 +252,7 @@
       "image_url": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/62aabd93a80240b1afbdb51b65076aab_9366/Forum_Low_Shoes_Blue_IG3784_01_standard.jpg",
       "in_stock": true,
       "featured": false,
-      "stars": 4.0,
+      "stars": 4,
       "special_offer": "15% off with code NMD15",
       "discount": 15,
       "warranty": "1 year",
@@ -412,7 +425,7 @@
       "image_url": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
       "in_stock": true,
       "featured": true,
-      "stars": 4.0,
+      "stars": 4,
       "special_offer": "None",
       "discount": 0,
       "warranty": "1 year",
@@ -454,7 +467,7 @@
       "image_url": "https://nb.scene7.com/is/image/NB/gsb550vr_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
       "in_stock": true,
       "featured": false,
-      "stars": 3.0,
+      "stars": 3,
       "special_offer": "None",
       "discount": 0,
       "warranty": "1 year",
@@ -545,8 +558,5 @@
       "quantity": 1,
       "additional_details": "Only a few left in stock."
     }
-
   ]
-
-  
 }

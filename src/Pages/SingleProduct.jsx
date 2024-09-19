@@ -2,16 +2,16 @@ import { useState, useEffect, useContext } from "react";
 import { useParams , Link} from "react-router-dom";
 import axios from "axios";
 import Stars from "../components/Rating/Stars";
-import { ProductContext } from "../Context/ProductContext";
 import { toast } from "react-toastify";
+import { ProductContext } from "../Context/ProductContext";
 
-const SingleProduct = ({products}) => {
+const SingleProduct = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [relatedProducts, setRelatedProducts] = useState([]);
-    const { dispatch} = useContext(ProductContext)
+    const { dispatch } = useContext(ProductContext);
 
 
     const handleCart = () => {
@@ -74,7 +74,7 @@ const SingleProduct = ({products}) => {
                 <div className="flex flex-wrap -mx-4"  >
                     {relatedProducts.length > 0 ? (
                         relatedProducts.map((relatedProduct) => (
-                          <div key={product.id} className="w-full md:w-1/3 lg:w-1/4 px-4 mb-8">
+                          <div key={product.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
                         <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
                                 <Link to={`/products/${relatedProduct.id}`}>
                                     <img

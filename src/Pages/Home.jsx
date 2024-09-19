@@ -1,10 +1,9 @@
 import './Home.css'
-
 import ImageSlider from "../components/Products/ImageSilder"
 import ProductLists from "../components/Products/ProductLists"
+import Featured from '../components/Products/Featured'
 import { useContext } from 'react'
 import { ProductContext } from '../Context/ProductContext'
-import Featured from '../components/Products/Featured'
 
 
  const Home = () => {

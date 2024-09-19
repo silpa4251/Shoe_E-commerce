@@ -39,6 +39,8 @@ const CartReducer = (state, action) => {
             return state.map(p =>
                 p.id === action.id ? { ...p, quantity: Math.max(p.quantity - 1, 1) } : p
             );
+        case 'Set_Cart':
+            return action.payload; 
         case 'Clear':
                 return [];
 

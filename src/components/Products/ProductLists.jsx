@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { ProductContext } from "../../Context/ProductContext";
 
 
@@ -15,7 +15,7 @@ const ProductLists = ({ products }) => {
             <div className="max-w-7xl mx-auto my-8 px-4">
                 <div className="flex flex-wrap -mx-4">
                     {products.map((product) => (
-                        <div key={product.id} className="w-full md:w-1/3 lg:w-1/4 px-4 mb-8">
+                        <div key={product.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
                             <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
                                 <Link to={`/products/${product.id}`}>
                                     <img
@@ -41,4 +41,4 @@ const ProductLists = ({ products }) => {
     );
 };
 
-export default ProductLists;
+export default ProductLists

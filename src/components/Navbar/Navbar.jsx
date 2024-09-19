@@ -4,14 +4,15 @@ import { IoIosCart } from "react-icons/io";
 import { useContext, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa"
+import { totalItem } from "../../Context/Hooks/CartReducer";
 import { ProductContext } from "../../Context/ProductContext";
-import { totalItem } from "../../Context/CartReducer";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-  const { cart } = useContext(ProductContext);
+  const { cart,logout,isAuthenticated,user} = useContext(ProductContext);
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -23,6 +24,10 @@ const Navbar = () => {
       navigate(`/search?name=${encodeURIComponent(search.trim())}`);
     }
   };
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+};
 
   return (
     <nav className="bg-white-800 p-4 sticky top-0 z-50 bg-white">
@@ -55,12 +60,36 @@ const Navbar = () => {
             </form>
           </div>
           <div className="flex md:hidden items-center space-x-6 relative">
+           
             <NavLink to="/cart">
               <IoIosCart size={24} className="cart-icon" />
-              <span className="absolute top-2 left-5 bg-red-600 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
+              <span className="absolute top-0 left-5 bg-red-600 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
                 {totalItem(cart)}
               </span>
             </NavLink>
+            {!isAuthenticated ? (
+              
+            <button
+              onClick={() => navigate('/login')}
+              className="block navitems px-3 py-2 login-btn"
+            >
+              Login
+            </button>
+          ) : (
+            <div className="flex items-center space-x-4">
+                       
+            
+            <button
+              onClick={handleLogout}
+              className="block navitems px-3 py-2 login-btn"
+            >
+              Logout
+            </button>
+            <NavLink to="/profile" className="hover:underline">
+                        <FaUserCircle size={30}  className="text-gray-600"/>
+                        </NavLink>
+            </div>
+          )}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden"
@@ -83,6 +112,11 @@ const Navbar = () => {
                 {item}
               </NavLink>
             ))}
+             {user && user.admin && (
+              <NavLink to={"/admin"} className=" navitems  px-3 py-2 rounded">
+              Admin Dashboard
+            </NavLink>
+            )}
             
               <NavLink to="/cart" className= "relative">
                 <IoIosCart size={24} className="cart-icon mt-2 navitems" />
@@ -90,11 +124,20 @@ const Navbar = () => {
                   {totalItem(cart)}
                 </span>
               </NavLink>
-            
-            <button onClick={() => navigate('/login')} className=" navitems  px-3 py-2 rounded">
+              {!isAuthenticated ? (
+            <button onClick={() => navigate('/login')} className=" navitems  px-3 py-2 rounded login-btn">
               Login
             </button>
-
+              ) : (
+            <div className="flex items-center space-x-4">
+              <button onClick={handleLogout} className=" navitems  px-3 py-2 rounded login-btn">
+                Logout
+              </button>
+             <NavLink to="/profile" className="hover:underline">
+              <FaUserCircle size={30}  className="text-gray-600"/>
+             </NavLink>
+            </div>
+            )}
           </div>
         </div>
       </div>
@@ -122,20 +165,25 @@ const Navbar = () => {
           <NavLink
             to={"/"}
             onClick={() => setIsOpen(false)}
-            className="block navitems px-3 py-2"
+            className="block navitems px-3 py-2 navitems "
           >
             Home
           </NavLink>
-          {["Men", "Women", "Kids", "Login"].map((item, id) => (
+          {["Men", "Women", "Kids"].map((item, id) => (
             <NavLink
               key={id}
               to={`/${item.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="block navitems px-3 py-2"
+              className="block navitems px-3 py-2 navitems "
             >
               {item}
             </NavLink>
           ))}
+          {user && user.admin && (
+              <NavLink to={"/admin"} className=" navitems  px-3 py-2 rounded">
+              Admin Dashboard
+            </NavLink>
+            )}
         </div>
       )}
     </nav>

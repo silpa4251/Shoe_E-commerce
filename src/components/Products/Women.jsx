@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import { ProductContext } from '../../Context/ProductContext';
 import ProductList from './ProductLists';
 import ImageSlider from './ImageSilder';
+import { useContext } from 'react';
+import { ProductContext } from '../../Context/ProductContext';
 
 const Women = () => {
   const { products } = useContext(ProductContext);

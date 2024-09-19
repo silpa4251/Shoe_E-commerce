@@ -16,11 +16,19 @@
     border-color: #710117;
 }
 .search-input .search-pic{
-    color: #710117;;
+    color: #710117
 }
 .cart-icon{
     color: #710117;
 }
 .nav-cart:hover{
     background-color: #ECD5BB;
+}
+.login-btn{
+    background-color: #710117;
+    color: #ECD5BB;
+}
+.login-btn:hover{
+    background-color: #570213;
+    color: #c0ad98;
 }
