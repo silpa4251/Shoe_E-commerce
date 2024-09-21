@@ -1,17 +1,14 @@
 .login-page{
-    /* background-image: url('/background1.png');
-    background-size: cover;
-    background-position: center; */
     background-color: #FDE5C3;
 }
 .login-back{
     background-color: #F9F3E6;
 }
 
-.login-head{
+.login-head, .checkout{
     color: #7A1625;
 }
-.login-input{
+.login-input , .check-input{
     background-color: #FAF8F3;
     border-bottom: #C4A484;
     color: #7A1625;
@@ -32,14 +29,26 @@
 .product-image:hover {
     transform: scale(1.1);
 }
-.product-btn{
+.product-btn, .check-btn{
     color: #ecd5bb;
     background-color: #8c021e;
 }
-.head-product{
+.head-product, .check-head{
     color: #710117;
 }
 .product-btn:hover{
     background-color:#710117 ;
+}
+.checkout-bgd{
+    background-color: #fff5e6;
+}
+.check-bgd{
+    background-color: #FAF8F3;
+}
+.sidenav{
+    background-color: #5B2333;
+}
+.sidebar:hover{
+    background-color: #8B3A4F;
 }
 

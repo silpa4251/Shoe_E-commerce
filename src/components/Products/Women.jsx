@@ -16,4 +16,4 @@ const Women = () => {
   );
 };
 
-export default Women;
+export default Women

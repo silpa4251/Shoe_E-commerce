@@ -180,7 +180,7 @@ const Navbar = () => {
             </NavLink>
           ))}
           {user && user.admin && (
-              <NavLink to={"/admin"} className=" navitems  px-3 py-2 rounded">
+              <NavLink to={"/admin"} className=" block navitems px-3 py-2 navitems">
               Admin Dashboard
             </NavLink>
             )}

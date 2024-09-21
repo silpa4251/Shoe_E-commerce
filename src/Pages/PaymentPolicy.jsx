@@ -16,8 +16,8 @@ const PaymentPolicy = () => {
                     <li>Credit Cards (Visa, MasterCard, American Express)</li>
                     <li>Debit Cards</li>
                     <li>PayPal</li>
-                    <li>Apple Pay</li>
-                    <li>Google Pay</li>
+                    <li>UPI Payments</li>
+                    <li>Net Banking</li>
                 </ul>
             </p>
             <h2 className="text-2xl font-semibold mb-2">2. Payment Security</h2>

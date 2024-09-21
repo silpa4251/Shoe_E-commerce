@@ -16,4 +16,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default Men

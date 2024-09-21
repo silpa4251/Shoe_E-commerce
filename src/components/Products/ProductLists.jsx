@@ -24,7 +24,7 @@ const ProductLists = ({ products }) => {
                                         className="h-48 w-full object-contain mb-4 products-image"
                                     />
                                     <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-                                    <p className="text-gray-700">${product.price}</p>
+                                    <p className="text-gray-700">Rs.{product.price}</p>
                                 </Link>
                                 <button
                                     onClick={() => handleCart(product)} 

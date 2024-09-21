@@ -9,11 +9,11 @@ const Stars = ({ stars }) => {
         return (
             <span key={index}>
                 {stars >= fullStar ? (
-                    <FaStar className="text-yellow-500" />  // Fully filled star
+                    <FaStar className="text-yellow-500" />  
                 ) : stars >= halfStar ? (
-                    <FaStarHalfAlt className="text-yellow-500" /> // Half-filled star
+                    <FaStarHalfAlt className="text-yellow-500" /> 
                 ) : (
-                    <FaRegStar className="text-yellow-500" />  // Empty star
+                    <FaRegStar className="text-yellow-500" />  
                 )}
             </span>
         );
@@ -22,4 +22,4 @@ const Stars = ({ stars }) => {
     return <div className="flex">{rating}</div>;
 };
 
-export default Stars;
+export default Stars

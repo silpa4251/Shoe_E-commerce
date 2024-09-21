@@ -25,9 +25,11 @@ import Profile from './Pages/Profile'
 import Admin from './components/Admin/Admin'
 import Dashboard from './components/Admin/Dashboard'
 import AllUsers from './components/Admin/AllUsers'
+import UserDetails from './components/Admin/UserDetails'
 import AllProduct from './components/Admin/AllProduct'
 import Orders from './components/Admin/Orders'
 import AdminRoute from './components/Route/AdminRoute'
+import PageNotFound from './Pages/PageNotFound'
 // import ProductLists from './Pages/ProductLists'
 
 function App() {
@@ -58,10 +60,11 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path='dashboard' element={<Dashboard />} />
             <Route path='users' element={<AllUsers />} />
-            <Route path='product_list' element={<AllProduct />} />
+            <Route path='users/:id' element={<UserDetails />} />
+            <Route path='productlist' element={<AllProduct />} />
             <Route path='orders' element={<Orders />} />
           </Route>
-          
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         <Footer/>
       </ProductProvider>

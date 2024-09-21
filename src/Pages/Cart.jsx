@@ -30,7 +30,7 @@ const Cart = () => {
                         <h2 className="text-2xl font-semibold mb-4">Cart Summary</h2>
                         <div className="mb-6">
                             <p className="text-lg font-medium">Total Items: <span className="font-semibold">{totalItem(cart)}</span></p>
-                            <p className="text-lg font-medium">Total Price: <span className="font-semibold">Rs. {totalPrice(cart).toFixed(2)}</span></p>
+                            <p className="text-lg font-medium">Total Price: <span className="font-semibold">Rs.{totalPrice(cart).toFixed(2)}</span></p>
                         </div>
                         <button onClick={()=> navigate('/checkout')} className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-4 rounded-lg shadow-lg transition duration-300">
                             Buy Now

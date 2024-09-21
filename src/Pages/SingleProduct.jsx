@@ -85,7 +85,7 @@ const SingleProduct = () => {
                                     <div className="p-4">
                                         <h3 className="text-lg font-semibold text-gray-800">{relatedProduct.name}</h3>
 
-                                        <p className="text-gray-600">${relatedProduct.price}</p>
+                                        <p className="text-gray-600">Rs.{relatedProduct.price}</p>
                                         <button onClick={() => dispatch({ type: 'Add', product: relatedProduct })} className=" py-2 px-4 rounded-lg product-btn transition duration-300">Add to Cart</button>
 
                                     </div>

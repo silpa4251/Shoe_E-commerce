@@ -4,38 +4,251 @@
       "id": "42c7",
       "username": "silpa",
       "email": "silpa@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "0fec",
-      "username": "hari",
-      "email": "hari123@gmail.com",
-      "password": "1810"
-    },
-    {
-      "id": "e266",
-      "username": "silja",
-      "email": "minnu@gmail.com",
-      "password": "4251"
+      "password": "1234",
+      "address": "silpa house,gandhi nagar , kochi",
+      "cart": [],
+      "phone": "4545456987",
+      "gender": "Female",
+      "orders": [
+        {
+          "orderId": "Order-1726756850287",
+          "shipping_Details": {
+            "name": "silpa",
+            "address": "silpa house,gandhi nagar , kochi",
+            "phone": "4545456987",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "Credit Card"
+          },
+          "totalItem": 1,
+          "totalPrice": "530.00",
+          "orderDate": "Thu Sep 19 2024 20:10:50 GMT+0530 (India Standard Time)",
+          "status": "shipped",
+          "ordered_Items": [
+            {
+              "Item_Name": "997R NEW-B Hook & Loop ",
+              "Image": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+              "Quantity": 1,
+              "price": 530
+            }
+          ]
+        },
+        {
+          "orderId": "Order-1726757765017",
+          "shipping_Details": {
+            "name": "silpa",
+            "address": "silpa house,gandhi nagar , kochi",
+            "phone": "4545456987",
+            "state": "kerala",
+            "pincode": "678594",
+            "paymentMethod": "UPI payments"
+          },
+          "totalItem": 1,
+          "totalPrice": "2900.00",
+          "orderDate": "Thu Sep 19 2024 20:26:05 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "Reebok Classic",
+              "Image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
+              "Quantity": 1,
+              "price": 2900
+            }
+          ]
+        },
+        {
+          "orderId": "Order-1726843994838",
+          "shipping_Details": {
+            "name": "silpa",
+            "address": "silpa house,gandhi nagar , kochi",
+            "phone": "4545456987",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "UPI payments"
+          },
+          "totalItem": 1,
+          "totalPrice": "450.00",
+          "orderDate": "Fri Sep 20 2024 20:23:14 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "990v6 Hook and Loop",
+              "Image": "https://nb.scene7.com/is/image/NB/iv990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+              "Quantity": 1,
+              "price": 450
+            }
+          ]
+        },
+        {
+          "orderId": "Order-1726844635608",
+          "shipping_Details": {
+            "name": "silpa",
+            "address": "silpa house,gandhi nagar , kochi",
+            "phone": "4545456987",
+            "state": "juhiuo",
+            "pincode": "458",
+            "paymentMethod": "Credit Card"
+          },
+          "totalItem": 2,
+          "totalPrice": "2699.00",
+          "orderDate": "Fri Sep 20 2024 20:33:55 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "Nike React Infinity Run",
+              "Image": "https://s.alicdn.com/@sc04/kf/Hae6fd6ba77cb49f3be8c884928ca847fR.jpg",
+              "Quantity": 2,
+              "price": 1700
+            },
+            {
+              "Item_Name": "Reebok Club C 85",
+              "Image": "https://s.alicdn.com/@sc04/kf/Ha1665e97746c4267806a294fbea6012aO.jpg",
+              "Quantity": 1,
+              "price": 999
+            }
+          ]
+        },
+        {
+          "orderId": "Order-1726847347060",
+          "shipping_Details": {
+            "name": "silpa",
+            "address": "silpa house,gandhi nagar , kochi",
+            "phone": "4545456987",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "Credit Card"
+          },
+          "totalItem": 2,
+          "totalPrice": "2550.00",
+          "orderDate": "Fri Sep 20 2024 21:19:07 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "Nike Air Force 1",
+              "Image": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
+              "Quantity": 1,
+              "price": 2000
+            },
+            {
+              "Item_Name": "New Balance 574",
+              "Image": "https://s.alicdn.com/@sc04/kf/Hc50f169228294ebb8c882b2a57b72e3bx.jpg",
+              "Quantity": 1,
+              "price": 550
+            }
+          ]
+        }
+      ],
+      "blocked": false
     },
     {
       "id": "8fe0",
       "username": "abc",
       "email": "abc123@gmail.com",
-      "password": "abc123"
+      "password": "abc123",
+      "cart": []
     },
     {
       "id": "a87c",
       "username": "user1",
       "email": "user1@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "cart": [],
+      "phone": "9823145324",
+      "gender": "Male",
+      "address": "user 2341 , user villa , andra pradesh",
+      "orders": [
+        {
+          "orderId": "Order-1726757549759",
+          "shipping_Details": {
+            "name": "user1",
+            "address": "user 2341 , user villa , andra pradesh",
+            "phone": "9823145324",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "Credit Card"
+          },
+          "totalItem": 2,
+          "totalPrice": "4885.00",
+          "orderDate": "Thu Sep 19 2024 20:22:29 GMT+0530 (India Standard Time)",
+          "status": "delivered",
+          "ordered_Items": [
+            {
+              "Item_Name": "Adidas Superstar",
+              "Image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c3cc4a0-2bf4-4a7c-a2ba-c83875642bc5/NIKE+CORTEZ+TXT.png",
+              "Quantity": 1,
+              "price": 2885
+            },
+            {
+              "Item_Name": "Nike Air Force 1",
+              "Image": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
+              "Quantity": 1,
+              "price": 2000
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "73c9",
       "username": "silpa das",
       "email": "silpadas4251@gmail.com",
       "password": "admin@4251",
-      "admin":true
+      "admin": true,
+      "cart": [
+        {
+          "id": "6",
+          "name": "Nike Air Force 1",
+          "description": "Iconic design with superior comfort and durability.",
+          "price": 2000,
+          "category": "Men",
+          "available_sizes": [
+            "6",
+            "7",
+            "8"
+          ],
+          "brand": "Nike",
+          "image_url": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
+          "in_stock": true,
+          "featured": true,
+          "stars": 3,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Regular stock available."
+        }
+      ]
+    },
+    {
+      "id": "1be5",
+      "username": "user2",
+      "email": "user2@gmail.com",
+      "password": "abcd",
+      "cart": [
+        {
+          "id": "3",
+          "name": "Nike X-3 ",
+          "description": "Retro-inspired shoes with a comfortable fit and bold design.",
+          "price": 115,
+          "category": "Men",
+          "available_sizes": [
+            "9",
+            "10",
+            "11"
+          ],
+          "brand": "Nike",
+          "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3ffcfac2-025a-4107-ac04-5fb938d3a5f6/KILLSHOT+2+LEATHER.png",
+          "in_stock": false,
+          "featured": false,
+          "stars": 3.4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Out of stock. Expected restock in two weeks."
+        }
+      ],
+      "blocked": false
     }
   ],
   "products": [
@@ -43,7 +256,7 @@
       "id": "2",
       "name": "New Balance",
       "description": "Modern and stylish shoes with excellent cushioning and support.",
-      "price": 150,
+      "price": 1500,
       "category": "Men",
       "available_sizes": [
         "7",
@@ -66,7 +279,7 @@
       "id": "3",
       "name": "Nike X-3 ",
       "description": "Retro-inspired shoes with a comfortable fit and bold design.",
-      "price": 115,
+      "price": 1150,
       "category": "Men",
       "available_sizes": [
         "9",
@@ -88,7 +301,7 @@
       "id": "4",
       "name": "Reebok Classic",
       "description": "Classic design with a timeless look and comfortable fit.",
-      "price": 90,
+      "price": 2900,
       "category": "Men",
       "quantity": 1,
       "available_sizes": [
@@ -109,7 +322,7 @@
       "id": "5",
       "name": "New Balance 990v5",
       "description": "Premium materials and craftsmanship for optimal comfort.",
-      "price": 175,
+      "price": 1750,
       "category": "Men",
       "quantity": 1,
       "available_sizes": [
@@ -131,7 +344,7 @@
       "id": "6",
       "name": "Nike Air Force 1",
       "description": "Iconic design with superior comfort and durability.",
-      "price": 100,
+      "price": 2000,
       "category": "Men",
       "available_sizes": [
         "6",
@@ -153,7 +366,7 @@
       "id": "7",
       "name": "Adidas Superstar",
       "description": "Classic sneakers with a modern twist for everyday wear.",
-      "price": 85,
+      "price": 2885,
       "category": "Men",
       "available_sizes": [
         "5",
@@ -175,7 +388,7 @@
       "id": "8",
       "name": "Puma Clyde",
       "description": "Stylish and comfortable sneakers for everyday wear.",
-      "price": 95,
+      "price": 1995,
       "category": "Men",
       "available_sizes": [
         "6",
@@ -197,7 +410,7 @@
       "id": "9",
       "name": "Reebok Zig Kinetica",
       "description": "High-performance shoes with a unique design and excellent cushioning.",
-      "price": 120,
+      "price": 1200,
       "category": "Men",
       "available_sizes": [
         "6",
@@ -218,7 +431,7 @@
       "id": "10",
       "name": "New Balance Fresh Foam",
       "description": "Comfortable and cushioned running shoes with advanced technology.",
-      "price": 150,
+      "price": 4550,
       "category": "Men",
       "available_sizes": [
         "8",
@@ -241,7 +454,7 @@
       "id": "11",
       "name": "Adidas NMD",
       "description": "Sleek and stylish sneakers with a comfortable fit for any occasion.",
-      "price": 160,
+      "price": 3500,
       "category": "Men",
       "available_sizes": [
         "8",
@@ -263,7 +476,7 @@
       "id": "12",
       "name": "Nike React Infinity Run",
       "description": "Innovative running shoes with exceptional cushioning and support.",
-      "price": 170,
+      "price": 1700,
       "category": "Women",
       "available_sizes": [
         "9",
@@ -285,7 +498,7 @@
       "id": "13",
       "name": "Puma Basket Classic",
       "description": "Vintage-inspired sneakers with a modern twist and superior comfort.",
-      "price": 100,
+      "price": 1000,
       "category": "Women",
       "available_sizes": [
         "6",
@@ -307,7 +520,7 @@
       "id": "14",
       "name": "Reebok Club C 85",
       "description": "Classic design with a comfortable fit for casual wear.",
-      "price": 90,
+      "price": 999,
       "category": "Women",
       "available_sizes": [
         "5",
@@ -329,7 +542,7 @@
       "id": "15",
       "name": "New Balance 574",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 550,
       "category": "Women",
       "available_sizes": [
         "8",
@@ -351,7 +564,7 @@
       "id": "16",
       "name": "New Balance 574",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 830,
       "category": "Women",
       "available_sizes": [
         "8",
@@ -373,7 +586,7 @@
       "id": "17",
       "name": "New Adidas 574",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 990,
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -394,7 +607,7 @@
       "id": "18",
       "name": "New balance 574",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 750,
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -415,7 +628,7 @@
       "id": "19",
       "name": "997R NEW-B Hook & Loop ",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 530,
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -436,7 +649,7 @@
       "id": "20",
       "name": "990v6 Hook and Loop",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 450,
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -457,7 +670,7 @@
       "id": "21",
       "name": "990v4 ",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 130,
+      "price": 730,
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -478,8 +691,8 @@
       "id": "22",
       "name": "Nike Infinity Run Flyknit",
       "description": "High-performance running shoes with React foam for maximum comfort.",
-      "price": 160,
-      "category": "Running",
+      "price": 580,
+      "category": "Men",
       "available_sizes": [
         "8",
         "9",
@@ -500,8 +713,8 @@
       "id": "23",
       "name": "Nike React Miler",
       "description": "Durable running shoes designed for long-distance comfort.",
-      "price": 130,
-      "category": "Running",
+      "price": 700,
+      "category": "Men",
       "available_sizes": [
         "8",
         "9",
@@ -522,7 +735,7 @@
       "id": "24",
       "name": " Unisex 9060",
       "description": "The 9060 is a new expression of the refined style and innovation-led design that have made the 99X series home to some of the most iconic models in New Balance history.",
-      "price": "139",
+      "price": "1399",
       "category": "Women",
       "available_sizes": [],
       "brand": "New Balance",
@@ -540,8 +753,8 @@
       "id": "25",
       "name": "New-balance FuelCell 990v6",
       "description": "This kids shoe modernizes the iconic style with reflective details throughout the upper and a FuelCell midsole that adds a propulsive fee maximum comfort.",
-      "price": 260,
-      "category": "kids",
+      "price": 1260,
+      "category": "Kids",
       "available_sizes": [
         "4",
         "5",
@@ -550,7 +763,7 @@
       "brand": "New-balance",
       "image_url": "https://nb.scene7.com/is/image/NB/pc990pk6_nb_05_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
       "in_stock": true,
-      "featured": false,
+      "featured": true,
       "stars": 2.4,
       "special_offer": "None",
       "discount": 0,

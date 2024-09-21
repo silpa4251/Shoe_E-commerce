@@ -4,6 +4,7 @@ import { useContext, useState } from "react"
 import { FaEye } from "react-icons/fa"
 import { TbEyeClosed } from "react-icons/tb";
 import { ProductContext } from "../Context/ProductContext";
+import { toast } from "react-toastify";
 
 const initialValue = {
   username: "",
@@ -36,7 +37,11 @@ const Login = () => {
       if (foundUser) {
         localStorage.setItem("loggedin", "true"); 
         localStorage.setItem('auth', JSON.stringify(foundUser));
-        login(foundUser); 
+        login(foundUser);
+        if(foundUser.blocked){
+          toast.error('Your account is blocked.',{ position: "top-center" });
+          return;
+        }
         if (foundUser.admin) {
           navigate('/admin');
         } else {

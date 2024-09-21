@@ -6,27 +6,27 @@ const Admin = () => {
     
   return (
     <div className="flex min-h-screen">
-        <aside className="w-64 bg-gray-800 text-white p-4">
+        <aside className="w-64 sidenav text-white p-4">
             <h1 className="text-2xl font-bold mb-6">Admin Panel</h1>
             <nav>
                 <ul>
                     <li className="mb-2">
-                        <NavLink to='/admin/dashboard' className="block p-2 rounded hover:bg-gray-600">
+                        <NavLink to='/admin/dashboard' className="block p-2 rounded sidebar">
                             Dashboard
                         </NavLink>
                     </li>
                     <li className="mb-2">
-                        <NavLink to='/admin/users' className="block p-2 rounded hover:bg-gray-600">
+                        <NavLink to='/admin/users' className="block p-2 rounded sidebar">
                             Users List
                         </NavLink>
                     </li>
                     <li className="mb-2">
-                        <NavLink to='/admin/product_list' className="block p-2 rounded hover:bg-gray-600">
+                        <NavLink to='/admin/productlist' className="block p-2 rounded sidebar">
                             Product List
                         </NavLink>
                     </li>
                     <li className="mb-2">
-                        <NavLink to='/admin/orders' className="block p-2 rounded hover:bg-gray-600">
+                        <NavLink to='/admin/orders' className="block p-2 rounded sidebar">
                             Orders
                         </NavLink>
                     </li>

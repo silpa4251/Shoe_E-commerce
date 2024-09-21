@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import  { useState, useEffect } from "react";
 import { FaEye } from "react-icons/fa"
 import { TbEyeClosed } from "react-icons/tb";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
@@ -29,20 +30,26 @@ const Register = () => {
     setIsSubmit(true);
     if (Object.keys(errors).length === 0) {
       try {
+        const res= await axios.get('http://localhost:4000/users');
+        const existingUser = res.data.find((user) => user.email === formData.email);
+        if( existingUser) {
+          toast.warn("User already exits",{ position: "top-center" });
+        } else {
         await axios.post('http://localhost:4000/users', formData);
-        alert("Registration successful");
+        toast.success("Registerd Successful");
         navigate('/login');
+        }
       } catch (error) {
         console.error("There was an error registering the user:", error);
       }
     }
   
   };
-  useEffect(() => {
-    if (Object.keys(formError).length === 0 && isSubmit) {
-      alert("Form submitted successfully");
-    }
-  }, [formError, isSubmit]);
+  // useEffect(() => {
+  //   if (Object.keys(formError).length === 0 && isSubmit) {
+  //     alert("Form submitted successfully");
+  //   }
+  // }, [formError, isSubmit]);
 
   const validate = (values) => {
     const errors = {};
