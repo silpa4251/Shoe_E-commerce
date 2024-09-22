@@ -30,6 +30,7 @@ const CartProduct = ({ product }) => {
       
       <div className="ml-6 flex-1">
         <h4 className="text-lg font-semibold text-gray-800 mb-2">{product.name}</h4>
+        <p className="text-gray-600">Size: {product.size}</p>
         <h5 className="text-xl font-semibold text-green-600 mb-4">Rs.{product.price.toFixed(2)}</h5>
 
         <div className="flex items-center space-x-4 border border-red-200 bg-gray-200 w-24">

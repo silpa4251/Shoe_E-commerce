@@ -47,6 +47,7 @@ const CheckoutPage = () => {
       ordered_Items : cart.map(item => ({
         Item_Name: item.name,
         Image : item.image_url,
+        Size: item.size,
         Quantity: item.quantity,
         price: item.price,
       })),
@@ -166,6 +167,7 @@ const CheckoutPage = () => {
                 <img src={item.image_url} alt={item.name} className="w-16 h-16 object-cover rounded-md mr-4" />
                 <div>
                   <p className="text-lg font-medium">{item.name}</p>
+                  <p className="text-gray-600">Size: {item.size}</p>
                   <p className="text-gray-600">Quantity: {item.quantity}</p>
                 </div>
               </div>

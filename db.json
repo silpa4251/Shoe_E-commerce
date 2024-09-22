@@ -23,7 +23,7 @@
           "totalItem": 1,
           "totalPrice": "530.00",
           "orderDate": "Thu Sep 19 2024 20:10:50 GMT+0530 (India Standard Time)",
-          "status": "shipped",
+          "status": "delivered",
           "ordered_Items": [
             {
               "Item_Name": "997R NEW-B Hook & Loop ",
@@ -46,7 +46,7 @@
           "totalItem": 1,
           "totalPrice": "2900.00",
           "orderDate": "Thu Sep 19 2024 20:26:05 GMT+0530 (India Standard Time)",
-          "status": "pending",
+          "status": "delivered",
           "ordered_Items": [
             {
               "Item_Name": "Reebok Classic",
@@ -69,7 +69,7 @@
           "totalItem": 1,
           "totalPrice": "450.00",
           "orderDate": "Fri Sep 20 2024 20:23:14 GMT+0530 (India Standard Time)",
-          "status": "pending",
+          "status": "canceled",
           "ordered_Items": [
             {
               "Item_Name": "990v6 Hook and Loop",
@@ -92,7 +92,7 @@
           "totalItem": 2,
           "totalPrice": "2699.00",
           "orderDate": "Fri Sep 20 2024 20:33:55 GMT+0530 (India Standard Time)",
-          "status": "pending",
+          "status": "shipped",
           "ordered_Items": [
             {
               "Item_Name": "Nike React Infinity Run",
@@ -139,13 +139,6 @@
         }
       ],
       "blocked": false
-    },
-    {
-      "id": "8fe0",
-      "username": "abc",
-      "email": "abc123@gmail.com",
-      "password": "abc123",
-      "cart": []
     },
     {
       "id": "a87c",
@@ -196,28 +189,31 @@
       "admin": true,
       "cart": [
         {
-          "id": "6",
-          "name": "Nike Air Force 1",
-          "description": "Iconic design with superior comfort and durability.",
-          "price": 2000,
+          "id": "4",
+          "name": "Reebok Classic",
+          "description": "Classic design with a timeless look and comfortable fit.",
+          "price": 2900,
           "category": "Men",
+          "quantity": 1,
           "available_sizes": [
-            "6",
-            "7",
-            "8"
+            "8",
+            "9"
           ],
-          "brand": "Nike",
-          "image_url": "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014.jpg",
+          "brand": "Reebok",
+          "image_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
           "in_stock": true,
           "featured": true,
-          "stars": 3,
-          "special_offer": "None",
-          "discount": 0,
-          "warranty": "1 year",
-          "quantity": 1,
-          "additional_details": "Regular stock available."
+          "stars": 3.4,
+          "special_offer": "15% off on your first purchase",
+          "discount": 15,
+          "warranty": "6 months",
+          "additional_details": "Available in various colors and sizes.",
+          "size": "8"
         }
-      ]
+      ],
+      "phone": "9961158293",
+      "gender": "Female",
+      "address": "silpa das , nettoli house , saradas , kolathara , calicut"
     },
     {
       "id": "1be5",
@@ -248,7 +244,113 @@
           "additional_details": "Out of stock. Expected restock in two weeks."
         }
       ],
-      "blocked": false
+      "blocked": true
+    },
+    {
+      "id": "ebfa",
+      "username": "kannmani",
+      "email": "kannmani@gmail.com",
+      "password": "1234",
+      "cart": [],
+      "phone": "9865789835",
+      "gender": "Female",
+      "address": "kann street , kohinoor , calicut",
+      "orders": [
+        {
+          "orderId": "Order-1726914213625",
+          "shipping_Details": {
+            "name": "kannmani",
+            "address": "kann street , kohinoor , calicut",
+            "phone": "9865789835",
+            "state": "kerala",
+            "pincode": "678598",
+            "paymentMethod": "UPI payments"
+          },
+          "totalItem": 3,
+          "totalPrice": "2740.00",
+          "orderDate": "Sat Sep 21 2024 15:53:33 GMT+0530 (India Standard Time)",
+          "status": "shipped",
+          "ordered_Items": [
+            {
+              "Item_Name": "New Adidas 574",
+              "Image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c8aba848adba4eeebf89ae2e00ba47dd_9366/Grand_Court_2.0_Shoes_Kids_White_GW6521_01_standard.jpg",
+              "Quantity": 1,
+              "price": 990
+            },
+            {
+              "Item_Name": "New balance 574",
+              "Image": "https://nb.scene7.com/is/image/NB/iv9060el_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+              "Quantity": 1,
+              "price": 750
+            },
+            {
+              "Item_Name": "Puma Basket Classic",
+              "Image": "https://s.alicdn.com/@sc04/kf/H099893a17cbd40358e75437d4e652d3cD.jpg",
+              "Quantity": 1,
+              "price": 1000
+            }
+          ]
+        },
+        {
+          "orderId": "Order-1727003022920",
+          "shipping_Details": {
+            "name": "kannmani",
+            "address": "kann street , kohinoor , calicut",
+            "phone": "9865789835",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "UPI payments"
+          },
+          "totalItem": 1,
+          "totalPrice": "580.00",
+          "orderDate": "Sun Sep 22 2024 16:33:42 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "Nike Infinity Run Flyknit",
+              "Image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+              "Size": "8",
+              "Quantity": 1,
+              "price": 580
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b610",
+      "username": "ram",
+      "email": "ram123@gmail.com",
+      "password": "1234",
+      "cart": [],
+      "phone": "98763259854",
+      "gender": "Male",
+      "address": "shoe nagar, rama nivas , kannur",
+      "orders": [
+        {
+          "orderId": "Order-1727002651699",
+          "shipping_Details": {
+            "name": "ram",
+            "address": "shoe nagar, rama nivas , kannur",
+            "phone": "98763259854",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "Debit Card"
+          },
+          "totalItem": 1,
+          "totalPrice": "530.00",
+          "orderDate": "Sun Sep 22 2024 16:27:31 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "997R NEW-B Hook & Loop ",
+              "Image": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+              "Quantity": 1,
+              "price": 530
+            }
+          ]
+        }
+      ]
     }
   ],
   "products": [
@@ -256,7 +358,7 @@
       "id": "2",
       "name": "New Balance",
       "description": "Modern and stylish shoes with excellent cushioning and support.",
-      "price": 1500,
+      "price": "1800",
       "category": "Men",
       "available_sizes": [
         "7",
@@ -670,7 +772,7 @@
       "id": "21",
       "name": "990v4 ",
       "description": "Timeless sneakers with premium materials and a comfortable fit.",
-      "price": 730,
+      "price": "2730",
       "category": "Kids",
       "available_sizes": [
         "3",
@@ -763,13 +865,35 @@
       "brand": "New-balance",
       "image_url": "https://nb.scene7.com/is/image/NB/pc990pk6_nb_05_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
       "in_stock": true,
-      "featured": true,
+      "featured": false,
       "stars": 2.4,
       "special_offer": "None",
       "discount": 0,
       "warranty": "1 year",
       "quantity": 1,
       "additional_details": "Only a few left in stock."
+    },
+    {
+      "id": "6c6d",
+      "name": "Zip Casual Boots",
+      "description": "HOOH- Now Comfort in fashion",
+      "price": 499,
+      "category": "Kids",
+      "available_sizes": [
+        "4",
+        "6",
+        "9"
+      ],
+      "brand": "HOOH",
+      "image_url": "https://rukminim1.flixcart.com/image/200/200/xif0q/kids-shoe/q/r/s/2c-led-long-shoes-hooh-now-comfort-in-fashion-original-imagymykjbu9nfn6.jpeg",
+      "in_stock": true,
+      "featured": true,
+      "stars": 4.5,
+      "special_offer": "50% off",
+      "discount": 50,
+      "warranty": "6 months",
+      "quantity": 1,
+      "additional_details": ""
     }
   ]
 }

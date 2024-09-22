@@ -23,7 +23,7 @@ const UserDetails = () => {
     <div className="p-6 bg-white shadow rounded-lg mt-6">
       {user ? (
         <>
-          <h2 className="text-3xl font-semibold mb-4">User Details: {user.username}</h2>
+          <h2 className="text-3xl font-bold mb-4 check-head">User Details: {user.username}</h2>
           <p><strong>Email:</strong> {user.email}</p>
           <p><strong>Phone:</strong> {user.phone}</p>
           <p><strong>Gender:</strong> {user.gender}</p>
@@ -31,7 +31,7 @@ const UserDetails = () => {
           <p><strong>Status:</strong> {user.blocked ? 'Blocked' : 'Active'}</p>
 
 
-          <h3 className="text-2xl font-semibold mt-4">Order History</h3>
+          <h3 className="text-2xl font-semibold mt-4 check-head">Order History</h3>
           {user.orders && user.orders.length > 0 ? (
             <table className="min-w-full table-auto mt-4">
               <thead>

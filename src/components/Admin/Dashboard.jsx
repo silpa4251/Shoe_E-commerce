@@ -44,11 +44,13 @@ const Dashboard = () => {
   const getStatus = (status) => {
     switch (status) {
       case "shipped":
-        return "bg-yellow-300 text-yellow-900";
+        return "bg-blue-400 text-blue-900";
       case "pending":
-        return "bg-red-500 text-red-100";
+        return "bg-yellow-500 text-yellow-900";
       case "delivered":
         return "bg-green-500 text-green-100";
+      case "canceled":
+          return "bg-red-500 text-red-100";
       default:
         return "bg-gray-100 text-gray-700";
     }
@@ -80,7 +82,7 @@ const Dashboard = () => {
 
       {/* Recent Orders Section */}
       <div className="p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Recent Orders</h2>
+        <h2 className="text-2xl font-bold mb-4 check-head">Recent Orders</h2>
         <table className="table-auto w-full border-collapse">
           <thead>
             <tr className="text-left bg-gray-100 text-gray-600">

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import axios from "axios";
 import { ProductContext } from "../Context/ProductContext";
+import { toast } from "react-toastify";
 
 const Profile = () => {
   const { user, setUser } = useContext(ProductContext); 
@@ -39,6 +40,7 @@ const Profile = () => {
     try {
       
       const response = await axios.patch(`http://localhost:4000/users/${user.id}`, prodata);
+      toast.success('Profile Updated');
       setUser(response.data);
       console.log("Profile Updated:", response.data);
     } catch (error) {

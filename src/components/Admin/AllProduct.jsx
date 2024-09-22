@@ -1,11 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AllProduct = () => {
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -13,8 +17,8 @@ const AllProduct = () => {
         const res = await axios.get('http://localhost:4000/products');
         setItems(res.data);
         setFilteredItems(res.data);
-        const unicategory = [...new Set(res.data.map(pro => pro.category))];
-        setCategories(unicategory);
+        const uniqueCategories = [...new Set(res.data.map(pro => pro.category))];
+        setCategories(uniqueCategories);
       } catch (err) {
         console.error('Error fetching products:', err);
       }
@@ -22,20 +26,52 @@ const AllProduct = () => {
 
     fetchProducts();
   }, []);
+
+  const filterItems = (category, term) => {
+    const filtered = items.filter(item => 
+      (category ? item.category === category : true) &&
+      (item.name.toLowerCase().includes(term.toLowerCase()) ||
+      item.brand.toLowerCase().includes(term.toLowerCase()))
+    );
+    setFilteredItems(filtered);
+  };
+
   const handleCategoryChange = (e) => {
     const category = e.target.value;
     setSelectedCategory(category);
-    if (category) {
-      setFilteredItems(items.filter(item => item.category === category));
-    } else {
-      setFilteredItems(items);
+    filterItems(category, searchTerm);
+  };
+
+  const handleSearchChange = (e) => {
+    const term = e.target.value;
+    setSearchTerm(term);
+    filterItems(selectedCategory, term); 
+  };
+
+  const handleAdd = () => {
+    navigate('/admin/add-product'); 
+  };
+
+  const handleEdit = (id) => {
+    navigate(`/admin/productlist/${id}`); 
+  };
+
+  const handleDlt = async (id) => {
+    try {
+      await axios.delete(`http://localhost:4000/products/${id}`);
+      toast.success('Product deleted successfully');
+      const updatedItems = items.filter(product => product.id !== id);
+      setItems( updatedItems);
+      setFilteredItems(selectedCategory, searchTerm);
+    } catch (error) {
+      console.error('Error deleting product:', error);
     }
   };
 
   return (
     <div className="p-6 bg-white shadow rounded-lg mt-6">
       <div className="flex justify-between mb-4">
-        <h2 className="text-3xl font-semibold">Products</h2>
+        <h2 className="text-3xl font-semibold check-head">Products</h2>
         <div className="flex items-center">
           <select
             value={selectedCategory}
@@ -47,11 +83,18 @@ const AllProduct = () => {
               <option key={index} value={category}>{category}</option>
             ))}
           </select>
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">
+          <input
+            type="text"
+            placeholder="Search by product name or brand"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="border rounded p-2 mr-4"
+          />
+          <button onClick={handleAdd} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">
             Add Product
           </button>
         </div>
-        </div>
+      </div>
       <table className="min-w-full border border-gray-200">
         <thead>
           <tr className="bg-gray-100">
@@ -64,7 +107,7 @@ const AllProduct = () => {
         <tbody>
           {filteredItems.length === 0 ? (
             <tr>
-              <td colSpan="3" className="border px-4 py-2 text-center">No products</td>
+              <td colSpan="4" className="border px-4 py-2 text-center">No products</td>
             </tr>
           ) : (
             filteredItems.map((item) => (
@@ -74,10 +117,10 @@ const AllProduct = () => {
                 <td className="border px-4 py-2">Rs.{item.price}</td>
                 <td className="border px-4 py-2">
                   <div className="flex space-x-2">
-                    <button className="bg-blue-500 text-white px-3 rounded">
+                    <button onClick={() => handleEdit(item.id)} className="bg-blue-500 text-white px-3 rounded">
                       Edit
                     </button>
-                    <button className="bg-red-500 text-white px-3 py-1">
+                    <button onClick={() => handleDlt(item.id)} className="bg-red-500 text-white px-3 py-1">
                       Delete
                     </button>
                   </div>

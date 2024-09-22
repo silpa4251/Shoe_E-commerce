@@ -12,11 +12,11 @@ export const totalPrice = (cart) => {
 const CartReducer = (state, action) => {
     switch(action.type) {
         case "Add":
-            { const existingProductIndex = state.findIndex(p => p.id === action.product.id);
+            { const existingProductIndex = state.findIndex((p) => p.id === action.product.id && p.size === action.product.size);
             if (existingProductIndex >= 0) {
                 const updatedState = state.map((product, index) =>
                     index === existingProductIndex
-                        ? { ...product, quantity: product.quantity + action.product.quantity }
+                        ? { ...product, quantity: Math.min(product.quantity + action.product.quantity,20 )}
                         : product
                 );
                 const existingProduct = state[existingProductIndex];
@@ -24,6 +24,7 @@ const CartReducer = (state, action) => {
                 return updatedState;
             } else {
                 toast.success(`${action.product.name}added to cart`,{toastId: "cartSucess",position: "top-center", autoClose: 2000});
+
                 return [...state, action.product];
             } }
 
@@ -32,7 +33,7 @@ const CartReducer = (state, action) => {
 
         case "Increase":
             return state.map(p =>
-                p.id === action.id ? { ...p, quantity: p.quantity + 1 } : p
+                p.id === action.id && p.quantity < 20 ? { ...p, quantity: p.quantity + 1 } : p
             );
 
         case "Decrease":

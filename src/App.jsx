@@ -30,7 +30,9 @@ import AllProduct from './components/Admin/AllProduct'
 import Orders from './components/Admin/Orders'
 import AdminRoute from './components/Route/AdminRoute'
 import PageNotFound from './Pages/PageNotFound'
-// import ProductLists from './Pages/ProductLists'
+import AddProducts from './components/Admin/AddProducts'
+import EditProduct from './components/Admin/EditProduct'
+
 
 function App() {
 
@@ -62,6 +64,9 @@ function App() {
             <Route path='users' element={<AllUsers />} />
             <Route path='users/:id' element={<UserDetails />} />
             <Route path='productlist' element={<AllProduct />} />
+            <Route path='productlist/:id' element={<EditProduct />} />
+            <Route path='add-product' element={<AddProducts />} />
+           
             <Route path='orders' element={<Orders />} />
           </Route>
           <Route path='*' element={<PageNotFound />} />
