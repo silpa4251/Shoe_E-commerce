@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Bar } from 'react-chartjs-2';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
   const [totalUsers, setTotalUsers] = useState(0);
@@ -29,10 +35,14 @@ const Dashboard = () => {
         });
         setTotalOrders(orderSum);
         setRevenue(revenueSum);
-        setRecentOrders(allOrders);
 
         const productRes = await axios.get("http://localhost:4000/products");
         setTotalProducts(productRes.data.length);
+
+        const sortedOrders = allOrders.sort((a,b)=> new Date(b.orderDate) - new Date(a.orderDate));
+        const latestOrders = sortedOrders.slice(0,5);
+        setRecentOrders(latestOrders);
+
       } catch (error) {
         console.error("Error fetching data", error);
       }
@@ -56,11 +66,45 @@ const Dashboard = () => {
     }
   };
 
+  const chartData = {
+    labels: ['Users', 'Products', 'Orders', 'Revenue'],
+    datasets: [
+      {
+        label: 'Statistics',
+        data: [totalUsers, totalProducts, totalOrders, revenue / 1000],
+        backgroundColor: ['#6366F1', '#10B981', '#F59E0B', '#EC4899'],
+        barThickness: 30, 
+      },
+    ],
+  };
+  
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom' },
+      title: { display: false },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false, 
+        },
+      },
+      y: {
+        beginAtZero: true,
+      },
+    },
+  
+  };
+
+  const percentage = (totalOrders / 100) * 100; 
+
   return (
     <div>
       <h1 className="text-4xl font-bold mb-8 check-head">Admin Dashboard</h1>
 
-      {/* Stats Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div className="p-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg rounded-lg">
           <h2 className="text-lg font-bold">Total Users</h2>
@@ -80,12 +124,35 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Recent Orders Section */}
-      <div className="p-6 bg-white shadow-lg rounded-lg">
+  
+      <div className="p-6 bg-white shadow-lg rounded-lg mt-8">
+      <h2 className="text-3xl font-bold mb-4 check-head">Site Overview</h2>
+      <div className="relative" style={{ width: '400px', height: '300px' }}> 
+        <Bar data={chartData} options={chartOptions} />
+      </div>
+    </div>
+
+      <div className="p-6 bg-white shadow-lg rounded-lg mt-8">
+        <h2 className="text-3xl font-bold mb-4 check-head">Order Completion Progress</h2>
+        <div className="w-40 mx-auto flex items-start">
+          <CircularProgressbar
+            value={percentage}
+            text={`${totalOrders} Orders`}
+            styles={buildStyles({
+              pathColor: `#F59E0B`,
+              textColor: '#333',
+              trailColor: '#E5E7EB',
+            })}
+          />
+        </div>
+      </div>
+      
+
+      <div className="p-6 bg-white shadow-lg rounded-lg mt-8">
         <h2 className="text-2xl font-bold mb-4 check-head">Recent Orders</h2>
-        <table className="table-auto w-full border-collapse">
+        <table className="table-auto w-full border-collapse ">
           <thead>
-            <tr className="text-left bg-gray-100 text-gray-600">
+            <tr className="text-left bg-gray-300 text-gray-800">
               <th className="px-4 py-2">Order ID</th>
               <th className="px-4 py-2">Customer</th>
               <th className="px-4 py-2">Date</th>
@@ -95,12 +162,12 @@ const Dashboard = () => {
           </thead>
           <tbody>
             {recentOrders.map((order, index) => (
-              <tr key={index} className="bg-white even:bg-gray-50">
+              <tr key={index} className="bg-white even:bg-gray-200">
                 <td className="border px-4 py-2">{order.orderId}</td>
                 <td className="border px-4 py-2">{order.shipping_Details.name}</td>
                 <td className="border px-4 py-2">{order.orderDate}</td>
                 <td className="border px-4 py-2">Rs.{order.totalPrice}</td>
-                <td className={`border px-4 py-2 text-center font-semibold rounded ${getStatus(order.status)}`}>
+                <td className={`border px-4 py-2 font-semibold ${getStatus(order.status)}`}>                
                   {order.status}
                 </td>
               </tr>
@@ -112,4 +179,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard
+export default Dashboard;

@@ -22,7 +22,6 @@ const SingleProduct = () => {
           
           if (product) {
             dispatch({ type: "Add", product: { ...product, size: selectedSize, quantity: 1 } });
-            toast.success(`${product.name} (Size: ${selectedSize}) added to cart`);
           }
     };
 

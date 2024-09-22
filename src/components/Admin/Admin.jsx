@@ -1,4 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { MdSpaceDashboard,MdOutlineEditCalendar } from "react-icons/md";
+import { FaUserEdit } from "react-icons/fa";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Admin = () => {
   return (
@@ -8,22 +11,26 @@ const Admin = () => {
         <nav>
           <ul>
             <li className="mb-2">
-              <NavLink to='/admin/dashboard' className="block p-2 rounded sidebar">
+              <NavLink to='/admin/dashboard' className="flex items-center p-2 rounded sidebar">
+              <MdSpaceDashboard size={24} className="mr-2"/>
                 Dashboard
               </NavLink>
             </li>
             <li className="mb-2">
-              <NavLink to='/admin/users' className="block p-2 rounded sidebar">
+              <NavLink to='/admin/users' className="flex items-center p-2 rounded sidebar">
+              <FaUserEdit size={24} className="mr-2"/>
                 Users List
               </NavLink>
             </li>
             <li className="mb-2">
-              <NavLink to='/admin/productlist' className="block p-2 rounded sidebar">
+              <NavLink to='/admin/productlist' className="flex items-center p-2 rounded sidebar">
+              <TiShoppingCart size={24} className="mr-2"/>
                 Product List
               </NavLink>
             </li>
             <li className="mb-2">
-              <NavLink to='/admin/orders' className="block p-2 rounded sidebar">
+              <NavLink to='/admin/orders' className="flex items-center p-2 rounded sidebar">
+              <MdOutlineEditCalendar size={24} className="mr-2"/>
                 Orders
               </NavLink>
             </li>

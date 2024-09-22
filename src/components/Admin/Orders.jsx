@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
   const [filteredOrders, setFilteredOrders] = useState([]);
   const [statusFilter, setStatusFilter] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -43,9 +45,9 @@ const OrderManagement = () => {
     filterOrders(status);
   };
 
-  const handleView = (id) => {
-    // Logic to navigate or open a modal to view order details
-    console.log('Viewing order', id);
+  const handleView = (order) => {
+    console.log('Navigating:', order);
+    navigate(`/admin/orders/${order.userId}/${order.orderId}`);
   };
 
   const handleDelete = async (orderId, userId) => {
@@ -90,8 +92,8 @@ const OrderManagement = () => {
 
   return (
     <div className="p-6 bg-white shadow rounded-lg mt-6">
-      <div className="flex justify-between mb-4">
-        <h2 className="text-3xl font-semibold check-head">Order Management</h2>
+      <h2 className="text-3xl font-semibold check-head">Order Management</h2>
+      <div className="flex justify-end mb-4">
         <div className="flex items-center">
           <select
             value={statusFilter}
@@ -108,7 +110,7 @@ const OrderManagement = () => {
       </div>
       <table className="min-w-full border border-gray-200">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-gray-300">
             <th className="border px-4 py-2 text-left">Order ID</th>
             <th className="border px-4 py-2 text-left">Customer</th>
             <th className="border px-4 py-2 text-left">Total Items</th>
@@ -124,7 +126,7 @@ const OrderManagement = () => {
             </tr>
           ) : (
             filteredOrders.map(order => (
-              <tr key={order.orderId} className="border-b hover:bg-gray-50">
+              <tr key={order.orderId} className="border-b hover:bg-gray-200">
                 <td className="border px-4 py-2">{order.orderId}</td>
                 <td className="border px-4 py-2">{order.customer}</td>
                 <td className="border px-4 py-2">{order.totalItem}</td>

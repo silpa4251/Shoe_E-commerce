@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -70,9 +71,19 @@ const AllProduct = () => {
 
   return (
     <div className="p-6 bg-white shadow rounded-lg mt-6">
-      <div className="flex justify-between mb-4">
         <h2 className="text-3xl font-semibold check-head">Products</h2>
+      <div className="flex justify-end mb-4">
+      
         <div className="flex items-center">
+          <div className="relative">
+        <input
+            type="text"
+            placeholder="Search products"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="border rounded p-2 mr-4"
+          /><FaSearch size={20} className='absolute right-5 top-[11px] check-head' />
+          </div>
           <select
             value={selectedCategory}
             onChange={handleCategoryChange}
@@ -83,13 +94,7 @@ const AllProduct = () => {
               <option key={index} value={category}>{category}</option>
             ))}
           </select>
-          <input
-            type="text"
-            placeholder="Search by product name or brand"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className="border rounded p-2 mr-4"
-          />
+         
           <button onClick={handleAdd} className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">
             Add Product
           </button>
@@ -97,7 +102,7 @@ const AllProduct = () => {
       </div>
       <table className="min-w-full border border-gray-200">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-gray-300">
             <th className="border px-4 py-2 text-left">Product Name</th>
             <th className="border px-4 py-2 text-left">Brand</th>
             <th className="border px-4 py-2 text-left">Price</th>
@@ -111,7 +116,7 @@ const AllProduct = () => {
             </tr>
           ) : (
             filteredItems.map((item) => (
-              <tr key={item.id} className="border-b hover:bg-gray-50">
+              <tr key={item.id} className="border-b hover:bg-gray-200">
                 <td className="border px-4 py-2">{item.name}</td>
                 <td className="border px-4 py-2">{item.brand}</td>
                 <td className="border px-4 py-2">Rs.{item.price}</td>

@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [filter, setFilter] = useState('All'); // For filtering by status
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,57 +25,80 @@ const AllUsers = () => {
 
   const viewDetails = (id) => {
     navigate(`/admin/users/${id}`);
-  }
+  };
 
   const blockUser = async (id) => {
     const userToBlock = users.find(user => user.id === id);
     if (userToBlock) {
-      const updatedUser = { ...userToBlock, blocked: true }; 
-      await axios.put(`http://localhost:4000/users/${id}`, updatedUser); 
-      toast.success(`${userToBlock} is blocked`);
-      setUsers(users.map(user => (user.id === id ? updatedUser : user))); 
+      const updatedUser = { ...userToBlock, blocked: true };
+      await axios.put(`http://localhost:4000/users/${id}`, updatedUser);
+      toast.success(`${userToBlock.username} is blocked`);
+      setUsers(users.map(user => (user.id === id ? updatedUser : user)));
     }
   };
 
   const unblockUser = async (id) => {
     const userToUnblock = users.find(user => user.id === id);
     if (userToUnblock) {
-      const updatedUser = { ...userToUnblock, blocked: false }; 
-      await axios.put(`http://localhost:4000/users/${id}`, updatedUser); 
-      toast.success(`${userToUnblock} is Unblocked`);
-      setUsers(users.map(user => (user.id === id ? updatedUser : user))); 
+      const updatedUser = { ...userToUnblock, blocked: false };
+      await axios.put(`http://localhost:4000/users/${id}`, updatedUser);
+      toast.success(`${userToUnblock.username} is unblocked`);
+      setUsers(users.map(user => (user.id === id ? updatedUser : user)));
     }
   };
 
   const deleteUser = async (id) => {
     await axios.delete(`http://localhost:4000/users/${id}`);
-    toast.success(`user deleted successfully`);
+    toast.success('User deleted successfully');
     setUsers(users.filter(user => user.id !== id));
   };
 
-  const filteredUsers = users.filter(user => 
-    user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.email.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredUsers = users
+    .filter(user => 
+      user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      user.email.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter(user => {
+      if (filter === 'Active') return !user.blocked;
+      if (filter === 'Blocked') return user.blocked;
+      return true; // 'All' filter
+    });
 
   return (
     <div className="p-6 bg-white shadow rounded-lg mt-6">
       <h2 className="text-3xl font-semibold mb-4 check-head">Users</h2>
-      <div className="flex justify-end mb-4">
-      <div className="relative">
-      <input
-        type="text"
-        placeholder="Search by username or email"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="border-2 border-slate-200 focus:border-slate-300 rounded p-2 pr-10 w-64 mb-2"
-      />
-      <FaSearch size={20} className='absolute right-2 top-[13px] check-head'/>
+
+      <div className="flex justify-end items-center mb-4 space-x-4">
+
+         {/* Search Input */}
+         <div className="relative">
+          <input
+            type="text"
+            placeholder="Search by username or email"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="border-2 border-slate-200 focus:border-slate-300 rounded p-2 pr-10 w-64"
+          />
+          <FaSearch size={20} className='absolute right-2 top-[13px] check-head' />
+        </div>
+
+        {/* Filter dropdown */}
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="border-2 border-slate-200 focus:border-slate-300 rounded p-2"
+        >
+          <option value="All">All</option>
+          <option value="Active">Active</option>
+          <option value="Blocked">Blocked</option>
+        </select>
+
+       
       </div>
-      </div>
+
       <table className="min-w-full border border-gray-200">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-gray-300">
             <th className="border px-4 py-2 text-left">Username</th>
             <th className="border px-4 py-2 text-left">Email</th>
             <th className="border px-4 py-2 text-left">Status</th>
@@ -85,18 +109,20 @@ const AllUsers = () => {
         <tbody>
           {filteredUsers.length === 0 ? (
             <tr>
-              <td colSpan="4" className="border px-4 py-2 text-center">No users found</td>
+              <td colSpan="5" className="border px-4 py-2 text-center">No users found</td>
             </tr>
           ) : (
             filteredUsers.map((user) => (
               <tr key={user.id} className="border-b hover:bg-gray-50">
                 <td className="border px-4 py-2">{user.username}</td>
                 <td className="border px-4 py-2">{user.email}</td>
-                <td className="border px-4 py-2"> <span className={`py-1 px-3 rounded-full text-white text-sm ${user.blocked ? 'bg-red-500' : 'bg-green-500'}`}>
-                      {user.blocked ? 'Blocked' : 'Active'}
-                    </span></td>
                 <td className="border px-4 py-2">
-                  <button onClick={() => viewDetails(user.id)} className='p-2 check-btn rounded '>
+                  <span className={`py-1 px-3 rounded-full text-white text-sm ${user.blocked ? 'bg-red-500' : 'bg-green-500'}`}>
+                    {user.blocked ? 'Blocked' : 'Active'}
+                  </span>
+                </td>
+                <td className="border px-4 py-2">
+                  <button onClick={() => viewDetails(user.id)} className="p-2 bg-blue-500 text-white rounded">
                     View Details
                   </button>
                 </td>
