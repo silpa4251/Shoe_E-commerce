@@ -5,7 +5,7 @@ const TermsofUse = () => {
     <div className="max-w-3xl mx-auto p-6 mt-8 bg-white shadow-lg rounded-lg">
             <h1 className="text-3xl font-bold text-center mb-4">Terms of Use</h1>
             <p className="text-lg mb-4">
-                Welcome to our e-commerce platform. By accessing or using our services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
+                Welcome to Step Whisper plathform. By accessing or using our services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
             </p>
 
             <h2 className="text-2xl font-semibold mb-2">1. Acceptance of Terms</h2>
@@ -36,7 +36,7 @@ const TermsofUse = () => {
 
             <h2 className="text-2xl font-semibold mb-2">5. Limitation of Liability</h2>
             <p className="mb-4">
-                Our platform and services are provided on an "as is" basis without any warranties of any kind. We are not liable for any damages resulting from the use or inability to use our platform.
+                Our platform and services are provided on the as is  basis without any warranties of any kind. We are not liable for any damages resulting from the use or inability to use our platform.
             </p>
 
             <h2 className="text-2xl font-semibold mb-2">6. Changes to Terms</h2>

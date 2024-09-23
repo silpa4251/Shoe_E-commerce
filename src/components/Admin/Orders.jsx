@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const OrderManagement = () => {
   const [orders, setOrders] = useState([]);
@@ -46,7 +46,6 @@ const OrderManagement = () => {
   };
 
   const handleView = (order) => {
-    console.log('Navigating:', order);
     navigate(`/admin/orders/${order.userId}/${order.orderId}`);
   };
 
@@ -54,13 +53,8 @@ const OrderManagement = () => {
     try {
       const res = await axios.get(`http://localhost:4000/users/${userId}`);
       const user = res.data;
-
-      // Remove the order from the user's orders array
       const updatedOrders = user.orders.filter(order => order.orderId !== orderId);
-
-      // Update the user's orders on the server
       await axios.patch(`http://localhost:4000/users/${userId}`, { orders: updatedOrders });
-
       toast.success('Order deleted successfully');
       setOrders(orders.filter(order => order.orderId !== orderId));
       setFilteredOrders(filteredOrders.filter(order => order.orderId !== orderId));
@@ -73,15 +67,10 @@ const OrderManagement = () => {
     try {
       const res = await axios.get(`http://localhost:4000/users/${userId}`);
       const user = res.data;
-
-      // Update the order's status
       const updatedOrders = user.orders.map(order => 
         order.orderId === orderId ? { ...order, status: newStatus } : order
       );
-
-      // Patch the updated orders back to the server
       await axios.patch(`http://localhost:4000/users/${userId}`, { orders: updatedOrders });
-
       toast.success('Order status updated');
       setOrders(orders.map(order => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
       setFilteredOrders(filteredOrders.map(order => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
@@ -162,4 +151,4 @@ const OrderManagement = () => {
   );
 };
 
-export default OrderManagement;
+export default OrderManagement

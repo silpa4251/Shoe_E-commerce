@@ -1,4 +1,4 @@
-import './Home.css'
+
 import ImageSlider from "../components/Products/ImageSilder"
 import ProductLists from "../components/Products/ProductLists"
 import Featured from '../components/Products/Featured'

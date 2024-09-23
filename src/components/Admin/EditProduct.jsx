@@ -1,7 +1,7 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { useParams, useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 
 const EditProduct = () => {
   const { id } = useParams();

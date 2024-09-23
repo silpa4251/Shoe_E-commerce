@@ -1,7 +1,7 @@
-import { NavLink, Outlet } from "react-router-dom";
-import { MdSpaceDashboard,MdOutlineEditCalendar } from "react-icons/md";
-import { FaUserEdit } from "react-icons/fa";
-import { TiShoppingCart } from "react-icons/ti";
+import { NavLink, Outlet } from "react-router-dom"
+import { MdSpaceDashboard,MdOutlineEditCalendar } from "react-icons/md"
+import { FaUserEdit } from "react-icons/fa"
+import { TiShoppingCart } from "react-icons/ti"
 
 const Admin = () => {
   return (
@@ -44,4 +44,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin

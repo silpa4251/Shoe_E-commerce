@@ -2,9 +2,9 @@ import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import { useContext, useState } from "react"
 import { FaEye } from "react-icons/fa"
-import { TbEyeClosed } from "react-icons/tb";
-import { ProductContext } from "../Context/ProductContext";
-import { toast } from "react-toastify";
+import { TbEyeClosed } from "react-icons/tb"
+import { ProductContext } from "../../Context/ProductContext"
+import { toast } from "react-toastify"
 
 const initialValue = {
   username: "",

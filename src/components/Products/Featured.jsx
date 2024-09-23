@@ -1,6 +1,6 @@
-import ProductList from './ProductLists';
-import { useContext } from 'react';
-import { ProductContext } from '../../Context/ProductContext';
+import ProductList from './ProductLists'
+import { useContext } from 'react'
+import { ProductContext } from '../../Context/ProductContext'
 
 const Featured = () => {
   const { products } = useContext(ProductContext);

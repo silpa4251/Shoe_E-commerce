@@ -22,11 +22,11 @@
 .shoeimg{
     background-color: #ecd5bb;
 }
-.product-image {
+.products-image {
     transition: transform 0.3s ease-in-out;
 }
 
-.product-image:hover {
+.products-image:hover {
     transform: scale(1.1);
 }
 .product-btn, .check-btn{

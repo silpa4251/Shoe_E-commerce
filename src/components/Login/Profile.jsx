@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
-import axios from "axios";
-import { ProductContext } from "../Context/ProductContext";
-import { toast } from "react-toastify";
+import { useContext, useEffect, useState } from "react"
+import { FaUserCircle } from "react-icons/fa"
+import axios from "axios"
+import { ProductContext } from "../../Context/ProductContext"
+import { toast } from "react-toastify"
 
 const Profile = () => {
   const { user, setUser } = useContext(ProductContext); 
@@ -131,4 +131,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Profile

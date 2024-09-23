@@ -18,6 +18,7 @@ const PaymentPolicy = () => {
                     <li>PayPal</li>
                     <li>UPI Payments</li>
                     <li>Net Banking</li>
+                    <li>Cash on delivery</li>
                 </ul>
             </p>
             <h2 className="text-2xl font-semibold mb-2">2. Payment Security</h2>

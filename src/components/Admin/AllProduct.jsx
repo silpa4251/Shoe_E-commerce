@@ -1,8 +1,8 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { FaSearch } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 
 const AllProduct = () => {
   const [items, setItems] = useState([]);
@@ -139,4 +139,4 @@ const AllProduct = () => {
   );
 };
 
-export default AllProduct;
+export default AllProduct

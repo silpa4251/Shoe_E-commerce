@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
-import { toast } from 'react-toastify';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { FaSearch } from 'react-icons/fa'
+import { toast } from 'react-toastify'
 
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filter, setFilter] = useState('All'); // For filtering by status
+  const [filter, setFilter] = useState('All');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const AllUsers = () => {
     .filter(user => {
       if (filter === 'Active') return !user.blocked;
       if (filter === 'Blocked') return user.blocked;
-      return true; // 'All' filter
+      return true;
     });
 
   return (
@@ -69,8 +69,6 @@ const AllUsers = () => {
       <h2 className="text-3xl font-semibold mb-4 check-head">Users</h2>
 
       <div className="flex justify-end items-center mb-4 space-x-4">
-
-         {/* Search Input */}
          <div className="relative">
           <input
             type="text"
@@ -82,7 +80,6 @@ const AllUsers = () => {
           <FaSearch size={20} className='absolute right-2 top-[13px] check-head' />
         </div>
 
-        {/* Filter dropdown */}
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
@@ -160,4 +157,4 @@ const AllUsers = () => {
   );
 };
 
-export default AllUsers;
+export default AllUsers

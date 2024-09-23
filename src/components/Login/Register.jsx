@@ -1,9 +1,9 @@
-import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import  { useState, useEffect } from "react";
+import axios from "axios"
+import { Link, useNavigate } from "react-router-dom"
+import  { useState } from "react"
 import { FaEye } from "react-icons/fa"
-import { TbEyeClosed } from "react-icons/tb";
-import { toast } from "react-toastify";
+import { TbEyeClosed } from "react-icons/tb"
+import { toast } from "react-toastify"
 
 
 const Register = () => {
@@ -28,7 +28,7 @@ const Register = () => {
     const errors = validate(formData);
     setFormError(errors);
     setIsSubmit(true);
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(errors).length === 0 && isSubmit) {
       try {
         const res= await axios.get('http://localhost:4000/users');
         const existingUser = res.data.find((user) => user.email === formData.email);
@@ -45,11 +45,7 @@ const Register = () => {
     }
   
   };
-  // useEffect(() => {
-  //   if (Object.keys(formError).length === 0 && isSubmit) {
-  //     alert("Form submitted successfully");
-  //   }
-  // }, [formError, isSubmit]);
+
 
   const validate = (values) => {
     const errors = {};

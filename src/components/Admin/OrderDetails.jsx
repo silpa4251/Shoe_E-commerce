@@ -1,6 +1,6 @@
-import { useParams, Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useParams, Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const OrderDetails = () => {
   const { orderId, userId } = useParams();
@@ -77,4 +77,4 @@ const OrderDetails = () => {
   );
 };
 
-export default OrderDetails;
+export default OrderDetails

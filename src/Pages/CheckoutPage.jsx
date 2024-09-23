@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
-import { totalItem, totalPrice } from '../Context/Hooks/CartReducer';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
-import { ProductContext } from '../Context/ProductContext';
-import axios from 'axios';
+import { useContext, useEffect, useState } from 'react'
+import { totalItem, totalPrice } from '../Hooks/CartReducer'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
+import { ProductContext } from '../Context/ProductContext'
+import axios from 'axios'
 
 
 
@@ -153,6 +153,7 @@ const CheckoutPage = () => {
                 <option value="Debit Card">Debit Card</option>
                 <option value="UPI payments">UPI payments</option>
                 <option value="Net Banking">Net Banking</option>
+                <option value="Net Banking">Cash on delivery</option>
               </select>
             </div>
           </form>

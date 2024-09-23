@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import ProductLists from '../components/Products/ProductLists'; 
-import { ProductContext } from "../Context/ProductContext";
+import { useContext, useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
+import ProductLists from './ProductLists'
+import { ProductContext } from "../../Context/ProductContext"
 
 const SearchPage = () => {
   const location = useLocation();
@@ -32,4 +32,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default SearchPage

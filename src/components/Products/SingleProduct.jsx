@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from "react";
-import { useParams, Link } from "react-router-dom";
-import axios from "axios";
-import Stars from "../components/Rating/Stars";
-import { toast } from "react-toastify";
-import { ProductContext } from "../Context/ProductContext";
+import { useState, useEffect, useContext } from "react"
+import { useParams, Link } from "react-router-dom"
+import axios from "axios"
+import Stars from "../Rating/Stars"
+import { toast } from "react-toastify"
+import { ProductContext } from "../../Context/ProductContext"
 
 const SingleProduct = () => {
     const { id } = useParams();
@@ -52,7 +52,7 @@ const SingleProduct = () => {
                     <img
                         src={product.image_url}
                         alt={product.name}
-                        className="w-full h-64 object-cover md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-lg product-image"
+                        className="w-full h-64 object-cover md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-lg products-image"
                     />
                 </div>
                 <div className="p-6 flex-1">
@@ -66,7 +66,7 @@ const SingleProduct = () => {
                     </div>
                     <p className="text-gray-700 mb-4">{product.description}</p>
 
-                    {/* Size Selection */}
+
                     <div className="mb-4">
                         <p className="text-xl text-gray-600 mb-2">Available sizes:</p>
                         <div className="flex space-x-2">
@@ -88,7 +88,7 @@ const SingleProduct = () => {
                 </div>
             </div>
 
-            {/* Similar Products Section */}
+
             <div className="mt-12 mx-4">
                 <h2 className="text-2xl font-semibold text-gray-800 mb-4">Similar Products</h2>
                 <div className="flex flex-wrap -mx-4">

@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useReducer } from "react"
 import axios from "axios"
-import CartReducer from "./Hooks/CartReducer";
+import CartReducer from "../Hooks/CartReducer"
 
 export const ProductContext = createContext();
 

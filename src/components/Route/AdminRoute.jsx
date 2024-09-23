@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../../Context/Hooks/Auth';
+import { useAuth } from '../../Hooks/Auth';
 
 const AdminRoute = ({ children }) => {
     const { isAuthenticated, isAdmin } = useAuth();

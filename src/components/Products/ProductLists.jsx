@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { ProductContext } from "../../Context/ProductContext";
+import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { ProductContext } from "../../Context/ProductContext"
 
 
 const ProductLists = ({ products }) => {

@@ -1,15 +1,16 @@
-import "./Navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IoIosCart } from "react-icons/io";
-import { useContext, useState } from "react";
-import { IoSearch } from "react-icons/io5";
-import { NavLink, useNavigate } from "react-router-dom";
+import "./Navbar.css"
+import { FaBars, FaTimes } from "react-icons/fa"
+import { IoIosCart } from "react-icons/io"
+import { useContext, useState } from "react"
+import { IoSearch } from "react-icons/io5"
+import { NavLink, useNavigate } from "react-router-dom"
 import { FaUserCircle } from "react-icons/fa"
-import { totalItem } from "../../Context/Hooks/CartReducer";
-import { ProductContext } from "../../Context/ProductContext";
+import { totalItem } from "../../Hooks/CartReducer"
+import { ProductContext } from "../../Context/ProductContext"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const { cart,logout,isAuthenticated,user} = useContext(ProductContext);
@@ -25,9 +26,17 @@ const Navbar = () => {
     }
   };
   const handleLogout = () => {
+    setShowConfirm(false);
     logout();
     navigate('/');
 };
+ 
+ const handleCancelLogout=()=>{
+  setShowConfirm(false);
+ }
+ const handleLogoutClick = () => {
+  setShowConfirm(true);
+ }
 
   return (
     <nav className="bg-white-800 p-4 sticky top-0 z-50 bg-white">
@@ -59,6 +68,8 @@ const Navbar = () => {
               </button>
             </form>
           </div>
+
+
           <div className="flex md:hidden items-center space-x-6 relative">
            
             <NavLink to="/cart">
@@ -80,7 +91,7 @@ const Navbar = () => {
                        
             
             <button
-              onClick={handleLogout}
+              onClick={handleLogoutClick}
               className="block navitems px-3 py-2 login-btn"
             >
               Logout
@@ -130,7 +141,7 @@ const Navbar = () => {
             </button>
               ) : (
             <div className="flex items-center space-x-4">
-              <button onClick={handleLogout} className=" navitems  px-3 py-2 rounded login-btn">
+              <button onClick={handleLogoutClick} className=" navitems  px-3 py-2 rounded login-btn">
                 Logout
               </button>
              <NavLink to="/profile" className="hover:underline">
@@ -185,6 +196,37 @@ const Navbar = () => {
             </NavLink>
             )}
         </div>
+      )}
+
+
+      {showConfirm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+        <button
+        onClick={handleCancelLogout}
+        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+      >
+        <FaTimes />
+      </button>
+          <h2 className="text-lg font-bold mb-4 text-center check-head">
+            Are you sure you want to logout?
+          </h2>
+          <div className="flex justify-center">
+            <button
+              onClick={handleCancelLogout}
+              className="bg-gray-500  text-white py-2 px-4 rounded hover:bg-gray-600 mr-3"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
       )}
     </nav>
   );

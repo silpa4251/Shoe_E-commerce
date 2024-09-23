@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const AddProducts = () => {
   const [product, setProduct] = useState({
@@ -36,10 +36,10 @@ const AddProducts = () => {
     e.preventDefault();
     const productToSubmit = {
       ...product,
-      available_sizes: product.available_sizes.split(',').map(size => size.trim()), // Convert sizes to array
-      stars: parseFloat(product.stars), // Ensure stars are a number
-      price: parseFloat(product.price), // Ensure price is a number
-      discount: parseFloat(product.discount), // Ensure discount is a number
+      available_sizes: product.available_sizes.split(',').map(size => size.trim()),
+      stars: parseFloat(product.stars),
+      price: parseFloat(product.price),
+      discount: parseFloat(product.discount),
     };
 
     try {
@@ -227,7 +227,7 @@ const AddProducts = () => {
           />
         </div>
 
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-200">
+        <button type="submit" className="check-btn px-4 py-2 rounded transition duration-200">
           Add Product
         </button>
       </form>
@@ -235,4 +235,4 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
+export default AddProducts

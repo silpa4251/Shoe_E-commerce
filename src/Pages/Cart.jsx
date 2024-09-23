@@ -1,8 +1,8 @@
-import CartProduct from '../components/Cart/CartProduct';
-import { totalItem, totalPrice } from '../Context/Hooks/CartReducer';
-import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
-import { ProductContext } from '../Context/ProductContext';
+import CartProduct from '../components/Cart/CartProduct'
+import { totalItem, totalPrice } from '../Hooks/CartReducer'
+import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { ProductContext } from '../Context/ProductContext'
 
 const Cart = () => {
     const { cart } = useContext(ProductContext);

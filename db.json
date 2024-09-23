@@ -187,30 +187,7 @@
       "email": "silpadas4251@gmail.com",
       "password": "admin@4251",
       "admin": true,
-      "cart": [
-        {
-          "id": "4",
-          "name": "Reebok Classic",
-          "description": "Classic design with a timeless look and comfortable fit.",
-          "price": 2900,
-          "category": "Men",
-          "quantity": 1,
-          "available_sizes": [
-            "8",
-            "9"
-          ],
-          "brand": "Reebok",
-          "image_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
-          "in_stock": true,
-          "featured": true,
-          "stars": 3.4,
-          "special_offer": "15% off on your first purchase",
-          "discount": 15,
-          "warranty": "6 months",
-          "additional_details": "Available in various colors and sizes.",
-          "size": "8"
-        }
-      ],
+      "cart": [],
       "phone": "9961158293",
       "gender": "Female",
       "address": "silpa das , nettoli house , saradas , kolathara , calicut"

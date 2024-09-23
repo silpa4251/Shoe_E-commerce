@@ -23,6 +23,9 @@ const Footer = () => {
                 <a href="/women" className="hover:text-gray-400">Women&apos;s Shoes</a>
               </li>
               <li className="mb-2">
+                <a href="/kids" className="hover:text-gray-400">Kid&apos;s Shoes</a>
+              </li>
+              <li className="mb-2">
                 <a href="/cart" className="hover:text-gray-400">Cart</a>
               </li>
               <li className="mb-2">

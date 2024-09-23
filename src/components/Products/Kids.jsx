@@ -1,8 +1,8 @@
 
-import ProductList from './ProductLists';
-import ImageSlider from '../../components/Products/ImageSilder';
-import { useContext } from 'react';
-import { ProductContext } from '../../Context/ProductContext';
+import ProductList from './ProductLists'
+import ImageSlider from '../../components/Products/ImageSilder'
+import { useContext } from 'react'
+import { ProductContext } from '../../Context/ProductContext'
 
 const Kids = () => {
   const { products } = useContext(ProductContext);
