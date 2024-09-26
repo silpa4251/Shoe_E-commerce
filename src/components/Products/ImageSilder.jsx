@@ -16,19 +16,19 @@ const ImageSlider = () => {
   const slidesData = [
     {
       id: 1,
-      image: "/public/offer1.jpg",
+      image: "./src/assets/offer1.jpg",
       title: "Big Sale - Up to 50% Off",
       description: "Grab the best deals on our exclusive collection!",
     },
     {
       id: 2,
-      image: "/public/newarrival.jpg",
+      image: "./src/assets/newarrival.jpg",
       title: "New Arrivals",
       description: "Check out the latest shoes in our store!",
     },
     {
       id: 3,
-      image: "/public/limited-edition.jpg",
+      image: "./src/assets/limited-edition.jpg",
       title: "Limited Edition",
       description: "Don't miss out on our limited edition sneakers.",
     },

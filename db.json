@@ -275,34 +275,42 @@
       "email": "silpadas4251@gmail.com",
       "password": "admin@4251",
       "admin": true,
-      "cart": [
-        {
-          "id": "6c6d",
-          "name": "Zip Casual Boots",
-          "description": "HOOH- Now Comfort in fashion",
-          "price": 499,
-          "category": "Kids",
-          "available_sizes": [
-            "4",
-            "6",
-            "9"
-          ],
-          "brand": "HOOH",
-          "image_url": "https://rukminim1.flixcart.com/image/200/200/xif0q/kids-shoe/q/r/s/2c-led-long-shoes-hooh-now-comfort-in-fashion-original-imagymykjbu9nfn6.jpeg",
-          "in_stock": true,
-          "featured": true,
-          "stars": 4.5,
-          "special_offer": "50% off",
-          "discount": 50,
-          "warranty": "6 months",
-          "quantity": 1,
-          "additional_details": ""
-        }
-      ],
+      "cart": [],
       "phone": "9961158293",
       "gender": "Female",
       "address": "silpa das , nettoli house , saradas , kolathara , calicut",
-      "wishlist": []
+      "wishlist": [],
+      "orders": [
+        {
+          "orderId": "Order-1727338334778",
+          "shipping_Details": {
+            "name": "silpa das",
+            "address": "silpa das , nettoli house , saradas , kolathara , calicut",
+            "phone": "9961158293",
+            "state": "",
+            "pincode": "",
+            "paymentMethod": "Credit Card"
+          },
+          "totalItem": 2,
+          "totalPrice": "3399.00",
+          "orderDate": "Thu Sep 26 2024 13:42:14 GMT+0530 (India Standard Time)",
+          "status": "pending",
+          "ordered_Items": [
+            {
+              "Item_Name": "Zip Casual Boots",
+              "Image": "https://rukminim1.flixcart.com/image/200/200/xif0q/kids-shoe/q/r/s/2c-led-long-shoes-hooh-now-comfort-in-fashion-original-imagymykjbu9nfn6.jpeg",
+              "Quantity": 1,
+              "price": 499
+            },
+            {
+              "Item_Name": "Reebok Classic",
+              "Image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
+              "Quantity": 1,
+              "price": 2900
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1be5",
