@@ -6,7 +6,29 @@
       "email": "silpa@gmail.com",
       "password": "1234",
       "address": "silpa house,gandhi nagar , kochi",
-      "cart": [],
+      "cart": [
+        {
+          "id": "19",
+          "name": "997R NEW-B Hook & Loop ",
+          "description": "Timeless sneakers with premium materials and a comfortable fit.",
+          "price": 530,
+          "category": "Kids",
+          "available_sizes": [
+            "3",
+            "4"
+          ],
+          "brand": "New balance",
+          "image_url": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+          "in_stock": true,
+          "featured": true,
+          "stars": 4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 2,
+          "additional_details": "Out of stock. Check back soon."
+        }
+      ],
       "phone": "4545456987",
       "gender": "Female",
       "orders": [
@@ -46,7 +68,7 @@
           "totalItem": 1,
           "totalPrice": "2900.00",
           "orderDate": "Thu Sep 19 2024 20:26:05 GMT+0530 (India Standard Time)",
-          "status": "delivered",
+          "status": "pending",
           "ordered_Items": [
             {
               "Item_Name": "Reebok Classic",
@@ -69,7 +91,7 @@
           "totalItem": 1,
           "totalPrice": "450.00",
           "orderDate": "Fri Sep 20 2024 20:23:14 GMT+0530 (India Standard Time)",
-          "status": "canceled",
+          "status": "shipped",
           "ordered_Items": [
             {
               "Item_Name": "990v6 Hook and Loop",
@@ -138,7 +160,73 @@
           ]
         }
       ],
-      "blocked": false
+      "blocked": false,
+      "wishlist": [
+        {
+          "id": "19",
+          "name": "997R NEW-B Hook & Loop ",
+          "description": "Timeless sneakers with premium materials and a comfortable fit.",
+          "price": 530,
+          "category": "Kids",
+          "available_sizes": [
+            "3",
+            "4"
+          ],
+          "brand": "New balance",
+          "image_url": "https://nb.scene7.com/is/image/NB/nw997rem_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+          "in_stock": true,
+          "featured": true,
+          "stars": 4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Out of stock. Check back soon."
+        },
+        {
+          "id": "6c6d",
+          "name": "Zip Casual Boots",
+          "description": "HOOH- Now Comfort in fashion",
+          "price": 499,
+          "category": "Kids",
+          "available_sizes": [
+            "4",
+            "6",
+            "9"
+          ],
+          "brand": "HOOH",
+          "image_url": "https://rukminim1.flixcart.com/image/200/200/xif0q/kids-shoe/q/r/s/2c-led-long-shoes-hooh-now-comfort-in-fashion-original-imagymykjbu9nfn6.jpeg",
+          "in_stock": true,
+          "featured": true,
+          "stars": 4.5,
+          "special_offer": "50% off",
+          "discount": 50,
+          "warranty": "6 months",
+          "quantity": 1,
+          "additional_details": ""
+        },
+        {
+          "id": "4",
+          "name": "Reebok Classic",
+          "description": "Classic design with a timeless look and comfortable fit.",
+          "price": 2900,
+          "category": "Men",
+          "quantity": 1,
+          "available_sizes": [
+            "8",
+            "9"
+          ],
+          "brand": "Reebok",
+          "image_url": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcf43637c2694ae197a1ab1487a0e8a4_9366/Duramo_RC_Shoes_Green_IE7991_01_standard.jpg",
+          "in_stock": true,
+          "featured": true,
+          "stars": 3.4,
+          "special_offer": "15% off on your first purchase",
+          "discount": 15,
+          "warranty": "6 months",
+          "additional_details": "Available in various colors and sizes."
+        }
+      ]
     },
     {
       "id": "a87c",
@@ -187,10 +275,34 @@
       "email": "silpadas4251@gmail.com",
       "password": "admin@4251",
       "admin": true,
-      "cart": [],
+      "cart": [
+        {
+          "id": "6c6d",
+          "name": "Zip Casual Boots",
+          "description": "HOOH- Now Comfort in fashion",
+          "price": 499,
+          "category": "Kids",
+          "available_sizes": [
+            "4",
+            "6",
+            "9"
+          ],
+          "brand": "HOOH",
+          "image_url": "https://rukminim1.flixcart.com/image/200/200/xif0q/kids-shoe/q/r/s/2c-led-long-shoes-hooh-now-comfort-in-fashion-original-imagymykjbu9nfn6.jpeg",
+          "in_stock": true,
+          "featured": true,
+          "stars": 4.5,
+          "special_offer": "50% off",
+          "discount": 50,
+          "warranty": "6 months",
+          "quantity": 1,
+          "additional_details": ""
+        }
+      ],
       "phone": "9961158293",
       "gender": "Female",
-      "address": "silpa das , nettoli house , saradas , kolathara , calicut"
+      "address": "silpa das , nettoli house , saradas , kolathara , calicut",
+      "wishlist": []
     },
     {
       "id": "1be5",
@@ -299,7 +411,30 @@
       "username": "ram",
       "email": "ram123@gmail.com",
       "password": "1234",
-      "cart": [],
+      "cart": [
+        {
+          "id": "22",
+          "name": "Nike Infinity Run Flyknit",
+          "description": "High-performance running shoes with React foam for maximum comfort.",
+          "price": 580,
+          "category": "Men",
+          "available_sizes": [
+            "8",
+            "9",
+            "10"
+          ],
+          "brand": "Nike",
+          "image_url": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "in_stock": true,
+          "featured": false,
+          "stars": 3.4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Only a few left in stock."
+        }
+      ],
       "phone": "98763259854",
       "gender": "Male",
       "address": "shoe nagar, rama nivas , kannur",
@@ -327,7 +462,59 @@
             }
           ]
         }
+      ],
+      "wishlist": [
+        {
+          "id": "22",
+          "name": "Nike Infinity Run Flyknit",
+          "description": "High-performance running shoes with React foam for maximum comfort.",
+          "price": 580,
+          "category": "Men",
+          "available_sizes": [
+            "8",
+            "9",
+            "10"
+          ],
+          "brand": "Nike",
+          "image_url": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg",
+          "in_stock": true,
+          "featured": false,
+          "stars": 3.4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Only a few left in stock."
+        },
+        {
+          "id": "18",
+          "name": "New balance 574",
+          "description": "Timeless sneakers with premium materials and a comfortable fit.",
+          "price": 750,
+          "category": "Kids",
+          "available_sizes": [
+            "3",
+            "4"
+          ],
+          "brand": "Adidas",
+          "image_url": "https://nb.scene7.com/is/image/NB/iv9060el_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880",
+          "in_stock": true,
+          "featured": true,
+          "stars": 3.4,
+          "special_offer": "None",
+          "discount": 0,
+          "warranty": "1 year",
+          "quantity": 1,
+          "additional_details": "Out of stock. Check back soon."
+        }
       ]
+    },
+    {
+      "id": "f760",
+      "username": "user3",
+      "email": "user3@gmail.com",
+      "password": "123456",
+      "cart": []
     }
   ],
   "products": [

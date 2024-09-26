@@ -8,6 +8,10 @@ export const totalPrice = (cart) => {
     return cart.reduce((total, product) => total + product.quantity * product.price , 0)
 }
 
+export const totalWish = (wishlist) => {
+    return wishlist.length;
+}
+
 
 const CartReducer = (state, action) => {
     switch(action.type) {

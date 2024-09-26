@@ -32,6 +32,7 @@ import PageNotFound from './Pages/PageNotFound'
 import AddProducts from './components/Admin/AddProducts'
 import EditProduct from './components/Admin/EditProduct'
 import OrderDetails from './components/Admin/OrderDetails'
+import WishList from './components/WishList/WishList'
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <Route path="/cart" element={<PrivateRoute element={<Cart />} />} />
           <Route path="/cartProducts" element={<PrivateRoute element={<CartProduct />} />} />
           <Route path="/checkout" element={<PrivateRoute element={<CheckoutPage />} />} /> 
+          <Route path='/wishlist' element={<PrivateRoute element={<WishList />} />} /> 
           <Route path='/profile' element={<Profile />} />
           <Route path='/login' element= {<Login />} />
           <Route path='/register' element= {<Register />} />

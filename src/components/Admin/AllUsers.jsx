@@ -47,12 +47,7 @@ const AllUsers = () => {
     }
   };
 
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:4000/users/${id}`);
-    toast.success('User deleted successfully');
-    setUsers(users.filter(user => user.id !== id));
-  };
-
+  
   const filteredUsers = users
     .filter(user => 
       user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -140,12 +135,7 @@ const AllUsers = () => {
                         Block
                       </button>
                     )}
-                    <button 
-                      className="bg-gray-500 text-white p-2 rounded hover:bg-gray-600 transition duration-200" 
-                      onClick={() => deleteUser(user.id)}
-                    >
-                      Delete
-                    </button>
+                    
                   </div>
                 </td>
               </tr>

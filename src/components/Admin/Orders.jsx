@@ -49,19 +49,7 @@ const OrderManagement = () => {
     navigate(`/admin/orders/${order.userId}/${order.orderId}`);
   };
 
-  const handleDelete = async (orderId, userId) => {
-    try {
-      const res = await axios.get(`http://localhost:4000/users/${userId}`);
-      const user = res.data;
-      const updatedOrders = user.orders.filter(order => order.orderId !== orderId);
-      await axios.patch(`http://localhost:4000/users/${userId}`, { orders: updatedOrders });
-      toast.success('Order deleted successfully');
-      setOrders(orders.filter(order => order.orderId !== orderId));
-      setFilteredOrders(filteredOrders.filter(order => order.orderId !== orderId));
-    } catch (error) {
-      console.error('Error deleting order:', error);
-    }
-  };
+ 
 
   const handleUpdateStatus = async (orderId, newStatus, userId) => {
     try {
@@ -137,9 +125,7 @@ const OrderManagement = () => {
                     <button onClick={() => handleView(order)} className="bg-blue-500 text-white px-3 rounded">
                       View
                     </button>
-                    <button onClick={() => handleDelete(order.orderId, order.userId)} className="bg-red-500 text-white px-3 py-1">
-                      Delete
-                    </button>
+                    
                   </div>
                 </td>
               </tr>
