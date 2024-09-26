@@ -1,4 +1,5 @@
 import "./Navbar.css"
+import logo from "../../assets/logo.png"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IoIosCart } from "react-icons/io"
 import { useContext, useState } from "react"
@@ -47,7 +48,7 @@ const Navbar = () => {
           className="flex items-center  text-xl font-bold"
           id="brand-name"
         >
-          <img src="./src/assets/logo.png" alt="logo" className="h-10 mr-2" />
+          <img src= {logo}  alt="logo" className="h-10 mr-2" />
           STEP WHISPER
         </NavLink>
         <div className="flex items-center space-x-4">

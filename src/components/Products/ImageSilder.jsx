@@ -1,8 +1,8 @@
 
 import Slider from "react-slick";
-import offer from "../../assets/offer1.jpg";
-import newArrival from "../../assets/newarrival.jpg";
-import limited from "../../assets/limited-edition.jpg";
+import offer from "../../assets/image2.jpg";
+import newArrival from "../../assets/image1.jpeg";
+import limited from "../../assets/image3.jpg";
 
 const ImageSlider = () => {
   const settings = {
@@ -38,10 +38,10 @@ const ImageSlider = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto my-8 px-4">
+    <div className="max-w-7xl mx-auto mb-8  mt-4 px-4">
       <Slider {...settings}>
         {slidesData.map((slide) => (
-          <div key={slide.id} className="relative h-[500px] md:h-[600px]">
+          <div key={slide.id} className="relative h-[500px] md:h-[570px]">
             <div className="w-full h-full">
               <img
                 src={slide.image}
