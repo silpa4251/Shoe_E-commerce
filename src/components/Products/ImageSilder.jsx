@@ -1,5 +1,8 @@
 
 import Slider from "react-slick";
+import offer from "../../assets/offer1.jpg";
+import newArrival from "../../assets/newarrival.jpg";
+import limited from "../../assets/limited-edition.jpg";
 
 const ImageSlider = () => {
   const settings = {
@@ -16,19 +19,19 @@ const ImageSlider = () => {
   const slidesData = [
     {
       id: 1,
-      image: "./src/assets/offer1.jpg",
+      image: offer,
       title: "Big Sale - Up to 50% Off",
       description: "Grab the best deals on our exclusive collection!",
     },
     {
       id: 2,
-      image: "./src/assets/newarrival.jpg",
+      image: newArrival,
       title: "New Arrivals",
       description: "Check out the latest shoes in our store!",
     },
     {
       id: 3,
-      image: "./src/assets/limited-edition.jpg",
+      image: limited,
       title: "Limited Edition",
       description: "Don't miss out on our limited edition sneakers.",
     },
