@@ -1,4 +1,5 @@
-import Slider from "react-slick"
+
+import Slider from "react-slick";
 
 const ImageSlider = () => {
   const settings = {
@@ -8,36 +9,36 @@ const ImageSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: true,
   };
 
   const slidesData = [
     {
       id: 1,
-      image: "/src/assets/offer1.jpg",
+      image: "/public/offer1.jpg",
       title: "Big Sale - Up to 50% Off",
       description: "Grab the best deals on our exclusive collection!",
     },
     {
       id: 2,
-      image: "/src/assets/newarrival.jpg",
+      image: "/public/newarrival.jpg",
       title: "New Arrivals",
       description: "Check out the latest shoes in our store!",
     },
     {
       id: 3,
-      image: "/src/assets/limited-edition.jpg",
+      image: "/public/limited-edition.jpg",
       title: "Limited Edition",
       description: "Don't miss out on our limited edition sneakers.",
     },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto my-8">
+    <div className="max-w-7xl mx-auto my-8 px-4">
       <Slider {...settings}>
         {slidesData.map((slide) => (
-          <div key={slide.id} className="relative h-[300px] ">
+          <div key={slide.id} className="relative h-[500px] md:h-[600px]">
             <div className="w-full h-full">
               <img
                 src={slide.image}
@@ -45,9 +46,13 @@ const ImageSlider = () => {
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-              <h2 className="text-white text-4xl font-bold">{slide.title}</h2>
-              <p className="text-white text-lg mt-2">{slide.description}</p>
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-4">
+              <h2 className="text-white text-3xl md:text-5xl font-bold">{slide.title}</h2>
+              <p className="text-white text-md md:text-lg mt-2 max-w-lg">{slide.description}</p>
+              <button className="mt-6 px-6 py-3 bg-gray-300 text-black font-semibold rounded-lg hover:bg-gray-400 transition duration-300" 
+                onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>
+                Shop Now
+              </button>
             </div>
           </div>
         ))}

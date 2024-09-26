@@ -13,7 +13,7 @@ import { ProductContext } from '../Context/ProductContext'
 
       <ImageSlider />
       <Featured />
-      <h1 className="text-2xl text-center font-semibold mb-8 head-product">Our products</h1>
+      <h1 className="text-2xl text-center font-semibold mb-8 head-product" id="products">Our products</h1>
       <ProductLists  products={products}/>
     </>
   )
