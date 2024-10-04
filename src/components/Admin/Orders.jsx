@@ -1,9 +1,9 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const OrderManagement = () => {
+const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [filteredOrders, setFilteredOrders] = useState([]);
   const [statusFilter, setStatusFilter] = useState('');
@@ -18,7 +18,7 @@ const OrderManagement = () => {
         normalUsers.forEach((user) => {
           if (user.orders) {
             user.orders.forEach((order) => {
-              allOrders.push({...order, customer: user.username, userId: user.id});
+              allOrders.push({ ...order, customer: user.username, userId: user.id });
             });
           }
         });
@@ -33,9 +33,7 @@ const OrderManagement = () => {
   }, []);
 
   const filterOrders = (status) => {
-    const filtered = orders.filter(order => 
-      status ? order.status === status : true
-    );
+    const filtered = orders.filter((order) => (status ? order.status === status : true));
     setFilteredOrders(filtered);
   };
 
@@ -49,19 +47,17 @@ const OrderManagement = () => {
     navigate(`/admin/orders/${order.userId}/${order.orderId}`);
   };
 
- 
-
   const handleUpdateStatus = async (orderId, newStatus, userId) => {
     try {
       const res = await axios.get(`http://localhost:4000/users/${userId}`);
       const user = res.data;
-      const updatedOrders = user.orders.map(order => 
+      const updatedOrders = user.orders.map((order) =>
         order.orderId === orderId ? { ...order, status: newStatus } : order
       );
       await axios.patch(`http://localhost:4000/users/${userId}`, { orders: updatedOrders });
       toast.success('Order status updated');
-      setOrders(orders.map(order => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
-      setFilteredOrders(filteredOrders.map(order => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
+      setOrders(orders.map((order) => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
+      setFilteredOrders(filteredOrders.map((order) => (order.orderId === orderId ? { ...order, status: newStatus } : order)));
     } catch (error) {
       console.error('Error updating order status:', error);
     }
@@ -85,56 +81,57 @@ const OrderManagement = () => {
           </select>
         </div>
       </div>
-      <table className="min-w-full border border-gray-200">
-        <thead>
-          <tr className="bg-gray-300">
-            <th className="border px-4 py-2 text-left">Order ID</th>
-            <th className="border px-4 py-2 text-left">Customer</th>
-            <th className="border px-4 py-2 text-left">Total Items</th>
-            <th className="border px-4 py-2 text-left">Total Price</th>
-            <th className="border px-4 py-2 text-left">Status</th>
-            <th className="border px-4 py-2 text-left">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredOrders.length === 0 ? (
-            <tr>
-              <td colSpan="6" className="border px-4 py-2 text-center">No orders found</td>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200">
+          <thead>
+            <tr className="bg-gray-300">
+              <th className="border px-4 py-2 text-left">Order ID</th>
+              <th className="border px-4 py-2 text-left">Customer</th>
+              <th className="border px-4 py-2 text-left">Total Items</th>
+              <th className="border px-4 py-2 text-left">Total Price</th>
+              <th className="border px-4 py-2 text-left">Status</th>
+              <th className="border px-4 py-2 text-left">Actions</th>
             </tr>
-          ) : (
-            filteredOrders.map(order => (
-              <tr key={order.orderId} className="border-b hover:bg-gray-200">
-                <td className="border px-4 py-2">{order.orderId}</td>
-                <td className="border px-4 py-2">{order.customer}</td>
-                <td className="border px-4 py-2">{order.totalItem}</td>
-                <td className="border px-4 py-2">Rs.{order.totalPrice}</td>
-                <td className="border px-4 py-2">
-                  <select
-                    value={order.status}
-                    onChange={(e) => handleUpdateStatus(order.orderId, e.target.value, order.userId)}
-                    className="border rounded p-1"
-                  >
-                    <option value="pending">Pending</option>
-                    <option value="shipped">Shipped</option>
-                    <option value="delivered">Delivered</option>
-                    <option value="canceled">Canceled</option>
-                  </select>
-                </td>
-                <td className="border px-4 py-2">
-                  <div className="flex space-x-2">
-                    <button onClick={() => handleView(order)} className="bg-blue-500 text-white px-3 rounded">
-                      View
-                    </button>
-                    
-                  </div>
-                </td>
+          </thead>
+          <tbody>
+            {filteredOrders.length === 0 ? (
+              <tr>
+                <td colSpan="6" className="border px-4 py-2 text-center">No orders found</td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              filteredOrders.map((order) => (
+                <tr key={order.orderId} className="border-b hover:bg-gray-300">
+                  <td className="border px-4 py-2">{order.orderId}</td>
+                  <td className="border px-4 py-2">{order.customer}</td>
+                  <td className="border px-4 py-2">{order.totalItem}</td>
+                  <td className="border px-4 py-2">Rs.{order.totalPrice}</td>
+                  <td className="border px-4 py-2">
+                    <select
+                      value={order.status}
+                      onChange={(e) => handleUpdateStatus(order.orderId, e.target.value, order.userId)}
+                      className="border rounded p-1"
+                    >
+                      <option value="pending">Pending</option>
+                      <option value="shipped">Shipped</option>
+                      <option value="delivered">Delivered</option>
+                      <option value="canceled">Canceled</option>
+                    </select>
+                  </td>
+                  <td className="border px-4 py-2">
+                    <div className="flex space-x-2">
+                      <button onClick={() => handleView(order)} className="bg-blue-500 text-white px-3 rounded">
+                        View
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
 
-export default OrderManagement
+export default Orders

@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg-login-bg login-page">
+    <div className="h-screen flex items-center justify-center bg-cover bg-center bg-login-bg login-page">
       <div className="relative p-8 login-back  bg-opacity-5 backdrop-blur-md shadow-lg rounded-lg max-w-sm w-full">
         <h2 className=" text-2xl font-bold login-head text-center mb-5">
           Good to see you Back..!

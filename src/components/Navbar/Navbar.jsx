@@ -16,6 +16,7 @@ const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const { cart,logout,isAuthenticated,user,wishlist} = useContext(ProductContext);
+  
 
   const handleSearch = (e) => {
     setSearch(e.target.value);

@@ -47,7 +47,6 @@ const AllUsers = () => {
     }
   };
 
-  
   const filteredUsers = users
     .filter(user => 
       user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -60,89 +59,88 @@ const AllUsers = () => {
     });
 
   return (
-    <div className="p-6 bg-white shadow rounded-lg mt-6">
-      <h2 className="text-3xl font-semibold mb-4 check-head">Users</h2>
+    <div className="p-4 sm:p-6 bg-white shadow rounded-lg mt-6">
+      <h2 className="text-2xl sm:text-3xl font-semibold mb-4 check-head">Users</h2>
 
-      <div className="flex justify-end items-center mb-4 space-x-4">
-         <div className="relative">
+      <div className="flex flex-col sm:flex-row sm:justify-end items-center mb-4 space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="relative w-full sm:w-auto">
           <input
             type="text"
             placeholder="Search by username or email"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border-2 border-slate-200 focus:border-slate-300 rounded p-2 pr-10 w-64"
+            className="w-full sm:w-64 border-2 border-slate-200 focus:border-slate-300 rounded p-2 pr-10"
           />
-          <FaSearch size={20} className='absolute right-2 top-[13px] check-head' />
+          <FaSearch size={20} className='absolute right-2 top-[10px] check-head' />
         </div>
 
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="border-2 border-slate-200 focus:border-slate-300 rounded p-2"
+          className="w-full sm:w-auto border-2 border-slate-200 focus:border-slate-300 rounded p-2"
         >
           <option value="All">All</option>
           <option value="Active">Active</option>
           <option value="Blocked">Blocked</option>
         </select>
-
-       
       </div>
 
-      <table className="min-w-full border border-gray-200">
-        <thead>
-          <tr className="bg-gray-300">
-            <th className="border px-4 py-2 text-left">Username</th>
-            <th className="border px-4 py-2 text-left">Email</th>
-            <th className="border px-4 py-2 text-left">Status</th>
-            <th className="border px-4 py-2 text-left">Details</th>
-            <th className="border px-4 py-2 text-left">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredUsers.length === 0 ? (
-            <tr>
-              <td colSpan="5" className="border px-4 py-2 text-center">No users found</td>
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-200">
+          <thead>
+            <tr className="bg-gray-300">
+              <th className="border px-2 sm:px-4 py-2 text-left">Username</th>
+              <th className="border px-2 sm:px-4 py-2 text-left">Email</th>
+              <th className="border px-2 sm:px-4 py-2 text-left">Status</th>
+              <th className="border px-2 sm:px-4 py-2 text-left">Details</th>
+              <th className="border px-2 sm:px-4 py-2 text-left">Actions</th>
             </tr>
-          ) : (
-            filteredUsers.map((user) => (
-              <tr key={user.id} className="border-b hover:bg-gray-50">
-                <td className="border px-4 py-2">{user.username}</td>
-                <td className="border px-4 py-2">{user.email}</td>
-                <td className="border px-4 py-2">
-                  <span className={`py-1 px-3 rounded-full text-white text-sm ${user.blocked ? 'bg-red-500' : 'bg-green-500'}`}>
-                    {user.blocked ? 'Blocked' : 'Active'}
-                  </span>
-                </td>
-                <td className="border px-4 py-2">
-                  <button onClick={() => viewDetails(user.id)} className="p-2 bg-blue-500 text-white rounded">
-                    View Details
-                  </button>
-                </td>
-                <td className="border px-4 py-2">
-                  <div className="flex space-x-2">
-                    {user.blocked ? (
-                      <button 
-                        className="bg-green-500 text-white p-2 rounded hover:bg-green-600 transition duration-200" 
-                        onClick={() => unblockUser(user.id)}
-                      >
-                        Unblock
-                      </button>
-                    ) : (
-                      <button 
-                        className="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-200" 
-                        onClick={() => blockUser(user.id)}
-                      >
-                        Block
-                      </button>
-                    )}
-                    
-                  </div>
-                </td>
+          </thead>
+          <tbody>
+            {filteredUsers.length === 0 ? (
+              <tr>
+                <td colSpan="5" className="border px-4 py-2 text-center">No users found</td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              filteredUsers.map((user) => (
+                <tr key={user.id} className="border-b hover:bg-gray-50">
+                  <td className="border px-2 sm:px-4 py-2">{user.username}</td>
+                  <td className="border px-2 sm:px-4 py-2">{user.email}</td>
+                  <td className="border px-2 sm:px-4 py-2">
+                    <span className={`py-1 px-3 rounded-full text-white text-sm ${user.blocked ? 'bg-red-500' : 'bg-green-500'}`}>
+                      {user.blocked ? 'Blocked' : 'Active'}
+                    </span>
+                  </td>
+                  <td className="border px-2 sm:px-4 py-2">
+                    <button onClick={() => viewDetails(user.id)} className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                      View Details
+                    </button>
+                  </td>
+                  <td className="border px-2 sm:px-4 py-2">
+                    <div className="flex space-x-2">
+                      {user.blocked ? (
+                        <button 
+                          className="bg-green-500 text-white w-17 p-2 rounded hover:bg-green-600 transition duration-200" 
+                          onClick={() => unblockUser(user.id)}
+                        >
+                          Unblock
+                        </button>
+                      ) : (
+                        <button 
+                          className="bg-red-500 text-white  px-4 py-2 w-18 rounded hover:bg-red-600 transition duration-200" 
+                          onClick={() => blockUser(user.id)}
+                        >
+                          Block
+                        </button>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

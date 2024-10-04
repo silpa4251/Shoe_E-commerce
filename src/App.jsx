@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import Login from './components/Login/Login'
 import Register from './components/Login/Register'
@@ -33,15 +33,15 @@ import AddProducts from './components/Admin/AddProducts'
 import EditProduct from './components/Admin/EditProduct'
 import OrderDetails from './components/Admin/OrderDetails'
 import WishList from './components/WishList/WishList'
+import { useAuth } from './Hooks/Auth'
 
 
 function App() {
 
-
   return (
     <>
       <ProductProvider>
-        <Navbar />
+       <NavbarConditional />
         <Routes>
           <Route path='/' element = {<Home />} />
           <Route path='/terms' element={<TermsofUse />} />
@@ -73,10 +73,22 @@ function App() {
           </Route>
           <Route path='*' element={<PageNotFound />} />
         </Routes>
-        <Footer/>
+        <FooterConditional />
       </ProductProvider>
     </>
   )
 }
+
+const NavbarConditional = () => {
+  const { isAdmin } = useAuth();
+  return !isAdmin && <Navbar />;
+};
+
+const FooterConditional = () => {
+  const { isAdmin } = useAuth();
+  const location = useLocation();
+  const noFooter = ["/login","/register"];
+  return (!isAdmin && !noFooter.includes(location.pathname)) && <Footer />;
+};
 
 export default App
